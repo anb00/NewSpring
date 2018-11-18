@@ -1,1 +1,1 @@
-# NewSpring
+# spring-rest-mvc-basics
