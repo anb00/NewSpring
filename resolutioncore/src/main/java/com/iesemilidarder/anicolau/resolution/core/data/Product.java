@@ -2,11 +2,7 @@ package com.iesemilidarder.anicolau.resolution.core.data;
 
 import java.util.UUID;
 
-/**
- * com.iesemilidarder.anicolau.resolution.core
- * Class Product
- * By berto. 14/11/2018
- */
+
 public abstract class Product {
     private UUID id = UUID.randomUUID();
     private Double precio;

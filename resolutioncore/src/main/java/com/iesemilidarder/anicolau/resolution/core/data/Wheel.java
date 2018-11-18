@@ -36,5 +36,5 @@ class Wheel {
                     "\t");
         }
         System.out.println();*/
-    } 
+    }
 }
