@@ -11,11 +11,7 @@ import javax.servlet.http.HttpSession;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * com.iesemilidarder.anicolau.resolution.web.controller
- * Class WebController
- * By berto. 15/11/2018
- */
+
 @Controller
 public class WebController {
     @RequestMapping("/")

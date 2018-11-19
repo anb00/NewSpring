@@ -5,7 +5,7 @@ import java.util.UUID;
 
 public abstract class Product {
     private UUID id = UUID.randomUUID();
-    private Double precio;
+    private Double precio = Math.random();
     private String name;
     private String description;
     private String imgUri;

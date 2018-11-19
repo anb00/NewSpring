@@ -1,6 +1,7 @@
 package com.iesemilidarder.anicolau.resolution.web.controller;
 
 import com.iesemilidarder.anicolau.resolution.core.DataHelper;
+import com.iesemilidarder.anicolau.resolution.core.data.Country;
 import com.iesemilidarder.anicolau.resolution.core.data.Product;
 import com.iesemilidarder.anicolau.resolution.core.data.Restaurant;
 import com.iesemilidarder.anicolau.resolution.web.service.CallMeService;
@@ -15,11 +16,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.UUID;
 
-/**
- * com.iesemilidarder.anicolau.resolution.web.controller
- * Class RestApiController
- * By berto. 14/11/2018
- */
+
 @RestController
 @RequestMapping("/api/rest")
 public class RestApiController {
@@ -76,5 +73,12 @@ public class RestApiController {
     @RequestMapping("/pruebas")
     public List<Product> init( Session session) {
         return init(session);
+    }
+
+
+
+    @RequestMapping("/getCountries")
+    public List<Country> getCountries( String name,String Location) {
+        return DataHelper.getCountries();
     }
 }
