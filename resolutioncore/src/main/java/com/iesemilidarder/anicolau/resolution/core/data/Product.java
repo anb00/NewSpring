@@ -3,7 +3,7 @@ package com.iesemilidarder.anicolau.resolution.core.data;
 import java.util.UUID;
 
 
-public abstract class Product {
+public  class Product {
     private UUID id = UUID.randomUUID();
     private Double precio = Math.random();
     private String name;

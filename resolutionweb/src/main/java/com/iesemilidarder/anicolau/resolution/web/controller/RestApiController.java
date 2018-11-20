@@ -1,4 +1,4 @@
-package com.iesemilidarder.anicolau.resolution.web.controller;
+package com.iesemilidarder.anicolau.resolution.web.controller;//package com.iesemilidarder.anicolau.resolution.web.controller;
 
 import com.iesemilidarder.anicolau.resolution.core.DataHelper;
 import com.iesemilidarder.anicolau.resolution.core.data.Country;
@@ -34,12 +34,7 @@ public class RestApiController {
         return aux;
     }
 
-    /**
-     * @param name        param input name=name
-     * @param description param input name=description
-     * @param img
-     * @return
-     */
+
     @RequestMapping("/add")
     public Product addProduct(
             @RequestParam String name,
