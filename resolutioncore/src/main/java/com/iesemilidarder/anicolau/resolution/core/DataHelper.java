@@ -96,10 +96,12 @@ public class DataHelper {
     public static void addItem(Product aux) {
         try{
             if (aux!=null){
-                Product alpha = getItemById(aux.getId());
-                if (alpha==null){
-                    products.add(alpha);
-                }
+                products.add(aux);
+                //Product alpha = getItemById(aux.getId());
+                //if (alpha==null){
+                  //  products.add(alpha);
+                //}
+
             }
         }catch (Exception e){
             System.out.println("MEK!!!" + e.toString());
