@@ -16,9 +16,12 @@ import java.util.List;
 public class WebController {
     @RequestMapping("/")
     public String index(HttpSession session, Model model) {
+        List<String> productTypes = Arrays.asList("Hoteles","Activities","Flights");
         List<String> data = Arrays.asList("yuhu1", "yuhu2", "yuhu3");
         //data.it
+
         model.addAttribute("datil",data);
+        model.addAttribute("tony",productTypes);
         //model.addAttribute("ip",session.get)
         //session.getServletContext().getip
         return "index";
@@ -27,5 +30,12 @@ public class WebController {
     public String macroTest(HttpSession session, Model model) {
         return "macroTest";
     }
+
+
+    @RequestMapping(value = "/inde")
+    public String index() {
+        return "inde";
+    }
+
 
 }

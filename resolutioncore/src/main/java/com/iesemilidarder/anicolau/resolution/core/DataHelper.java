@@ -100,7 +100,8 @@ public class DataHelper {
                 //Product alpha = getItemById(aux.getId());
                 //if (alpha==null){
                   //  products.add(alpha);
-                //}
+                //
+                // }
 
             }
         }catch (Exception e){
