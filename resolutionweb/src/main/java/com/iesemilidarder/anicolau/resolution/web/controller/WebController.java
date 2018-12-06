@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+import static com.iesemilidarder.anicolau.resolution.core.DataHelper.countries;
 import static javafx.scene.input.KeyCode.S;
 
 
@@ -21,7 +22,7 @@ import static javafx.scene.input.KeyCode.S;
 public class WebController {
     @RequestMapping("/")
     public String index(HttpSession session, Model model) {
-        List<String> productTypes = Arrays.asList("Hoteles","Activities","Flights");
+        List<String> productTypes = Arrays.asList("Hoteles","Activities","Flights","Restaurants");
         List<String> data = Arrays.asList("yuhu0", "yuhu2", "yuhu3");
 
         //data.it
@@ -30,13 +31,13 @@ public class WebController {
         //model.addAllAttributes("it", ite);
 
         model.addAttribute("tony",productTypes);
-        //model.addAttribute("ip",session.get)
+        model.addAttribute("ip",session);
         session.getServletContext().getClass();
         session.getCreationTime();
         session.getClass();
         session.getAttributeNames();
         //Size.List<contries>
-        return "index";
+        return "indexy";
     }
     @RequestMapping("/macros")
     public String macroTest(HttpSession session, Model model) {
@@ -44,9 +45,9 @@ public class WebController {
     }
 
 
-    @RequestMapping(value = "/inde")
+    @RequestMapping(value = "/web")
     public String index() {
-        return "inde";
+        return "index";
     }
 
 
