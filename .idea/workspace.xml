@@ -2,30 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00bb697f-59db-49a8-91be-5278ccb71a95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resolutionweb/src/main/resources/templates/inde.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resolutionweb/target/classes/templates/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resolutionweb/target/classes/templates/inde.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resolutionweb/src/main/resources/templates/img/9ca3bb153136670055ba486cf1efd56b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resolutionweb/src/main/resources/templates/img/wallhaven-401364.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resolutionweb/src/main/resources/templates/img/wallhaven-701629.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resolutionweb/src/main/resources/templates/macro/macroWrap.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolutioncore/src/main/java/com/iesemilidarder/anicolau/resolution/core/DataHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/resolutioncore/src/main/java/com/iesemilidarder/anicolau/resolution/core/DataHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolutioncore/target/classes/com/iesemilidarder/anicolau/resolution/core/DataHelper$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/resolutioncore/target/classes/com/iesemilidarder/anicolau/resolution/core/DataHelper$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolutioncore/target/classes/com/iesemilidarder/anicolau/resolution/core/DataHelper$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/resolutioncore/target/classes/com/iesemilidarder/anicolau/resolution/core/DataHelper$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolutioncore/target/classes/com/iesemilidarder/anicolau/resolution/core/DataHelper$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/resolutioncore/target/classes/com/iesemilidarder/anicolau/resolution/core/DataHelper$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolutioncore/target/classes/com/iesemilidarder/anicolau/resolution/core/DataHelper$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/resolutioncore/target/classes/com/iesemilidarder/anicolau/resolution/core/DataHelper$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolutioncore/target/classes/com/iesemilidarder/anicolau/resolution/core/DataHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/resolutioncore/target/classes/com/iesemilidarder/anicolau/resolution/core/DataHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolutioncore/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/resolutioncore/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolutioncore/target/resolution-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/resolutioncore/target/resolution-core-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolutioncore/target/resolution-core-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/resolutioncore/target/resolution-core-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolutionweb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resolutionweb/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/controller/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolutionweb/src/main/resources/static/css/guru.css" beforeDir="false" afterPath="$PROJECT_DIR$/resolutionweb/src/main/resources/templates/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolutionweb/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/resolutionweb/src/main/resources/templates/fragments/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resolutionweb/src/main/resources/templates/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/resolutionweb/src/main/resources/templates/index.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resolutionweb/src/main/resources/templates/macro/myMacro.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/resolutionweb/src/main/resources/templates/macro/myMacro.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resolutionweb/target/classes/com/iesemilidarder/anicolau/resolution/web/controller/WebController.class" beforeDir="false" afterPath="$PROJECT_DIR$/resolutionweb/target/classes/com/iesemilidarder/anicolau/resolution/web/controller/WebController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolutionweb/target/classes/static/css/guru.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resolutionweb/target/classes/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/resolutionweb/target/classes/templates/fragments/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resolutionweb/target/classes/templates/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/resolutionweb/target/classes/templates/index.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resolutionweb/target/classes/templates/macro/myMacro.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/resolutionweb/target/classes/templates/macro/myMacro.ftl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/resolutioncore/target/" />
@@ -150,103 +137,119 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1032958482">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="FTL" value="251" />
+          <entry key="JAVA" value="25" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="FTL" value="6" />
+          <entry key="HTML" value="3" />
+          <entry key="JAVA" value="16" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resolutioncore/src/main/java/com/iesemilidarder/anicolau/resolution/core/DataHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1058">
-              <caret line="116" column="19" selection-start-line="116" selection-start-column="19" selection-end-line="116" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3601#3766#0" expanded="true" />
-                <element signature="e#3765#3766#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/index.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/controller/WebController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="e#1205#1206#0" expanded="true" />
-                <element signature="e#1235#1236#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="25" column="14" selection-start-line="13" selection-end-line="27" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resolutioncore/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/macro/myMacro.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/macro/macroWrap.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/macroTest.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/index.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/service/ItemService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/service/CallMeService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/service/ItemServiceImp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/controller/ItemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+            <state relative-caret-position="159">
+              <caret line="55" column="12" selection-start-line="55" selection-start-column="8" selection-end-line="56" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resolutioncore/src/main/java/com/iesemilidarder/anicolau/resolution/core/data/Product.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resolutionweb/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/inde.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/css/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -299,7 +302,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/resolutionweb/pom.xml" />
         <option value="$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/controller/WebController.java" />
+        <option value="$PROJECT_DIR$/resolutionweb/src/main/resources/templates/macro/myMacro.ftl" />
         <option value="$PROJECT_DIR$/resolutionweb/src/main/resources/templates/index.ftl" />
+        <option value="$PROJECT_DIR$/resolutionweb/src/main/resources/templates/macro/macroWrap.ftl" />
       </list>
     </option>
   </component>
@@ -341,8 +346,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="233" />
-    <option name="y" value="32" />
+    <option name="x" value="35" />
+    <option name="y" value="22" />
     <option name="width" value="1638" />
     <option name="height" value="968" />
   </component>
@@ -357,29 +362,29 @@
           <expand>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutioncore" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutioncore" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutioncore" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutioncore" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -387,7 +392,7 @@
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutioncore" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -396,7 +401,7 @@
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutioncore" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -406,25 +411,25 @@
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutionweb" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutionweb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutionweb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutionweb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -432,7 +437,7 @@
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutionweb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -441,7 +446,7 @@
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutionweb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -451,7 +456,7 @@
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutionweb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -461,7 +466,17 @@
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
+              <item name="resolutionweb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutionweb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -469,7 +484,7 @@
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutionweb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -478,12 +493,18 @@
             </path>
             <path>
               <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
               <item name="resolutionweb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="resolution-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iaw-v2-milestone-anb00" type="462c0819:PsiDirectoryNode" />
+              <item name="resolutionweb" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -501,14 +522,15 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543800374620" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544085643524" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\proyects\src\iaw-v2-milestone-anb00\resolutionweb\src\main\resources\templates\img" />
       <recent name="J:\2ºFPGS-Antonio Nicolau\iaw - Implantación de aplicaciones\iaw\PROYECTOS\src\NewSpring\resolutionweb\src\main\resources\templates" />
       <recent name="C:\PROYECTOS\src\NewSpring\resolutioncore\src\main\java\com\iesemilidarder\anicolau\resolution\core\data" />
     </key>
@@ -556,16 +578,18 @@
       <workItem from="1543687981570" duration="2490000" />
       <workItem from="1543712236011" duration="139000" />
       <workItem from="1543748682362" duration="4719000" />
+      <workItem from="1544054306513" duration="7360000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33997000" />
+    <option name="totallyTimeSpent" value="41357000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="233" y="32" width="1638" height="968" extended-state="0" />
+    <frame x="35" y="22" width="1638" height="968" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38212928" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30101395" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -575,7 +599,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297362" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.57724553" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.235012" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -649,27 +673,6 @@
     <entry file="file://$PROJECT_DIR$/resolutioncore/src/main/java/com/iesemilidarder/anicolau/resolution/core/data/Fonts.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/service/CallMeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/service/ItemServiceImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/service/ItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -701,23 +704,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resolutioncore/src/main/java/com/iesemilidarder/anicolau/resolution/core/data/Country.java">
+    <entry file="file://$PROJECT_DIR$/resolutioncore/src/main/java/com/iesemilidarder/anicolau/resolution/core/data/Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/Application.java">
+    <entry file="file://$PROJECT_DIR$/resolutioncore/src/main/java/com/iesemilidarder/anicolau/resolution/core/data/Revol.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        <state relative-caret-position="884">
+          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resolutioncore/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resolutioncore/src/main/java/com/iesemilidarder/anicolau/resolution/core/data/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resolutionweb/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/bean/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="612">
           <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -733,60 +767,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resolutioncore/src/main/java/com/iesemilidarder/anicolau/resolution/core/data/Activity.java">
+    <entry file="file://$PROJECT_DIR$/resolutioncore/src/main/java/com/iesemilidarder/anicolau/resolution/core/data/Country.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="136">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resolutioncore/src/main/java/com/iesemilidarder/anicolau/resolution/core/data/Revol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/fragments/headerinc.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/controller/RestApiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/controller/ItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resolutioncore/src/main/java/com/iesemilidarder/anicolau/resolution/core/data/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resolutioncore/src/main/java/com/iesemilidarder/anicolau/resolution/core/DataHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1058">
-          <caret line="116" column="19" selection-start-line="116" selection-start-column="19" selection-end-line="116" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3601#3766#0" expanded="true" />
-            <element signature="e#3765#3766#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resolutioncore/pom.xml">
+    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/fragments/header.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/inde.html">
@@ -796,42 +787,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/controller/RestApiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resolutionweb/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/controller/WebController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="-606">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
-            <element signature="e#1205#1206#0" expanded="true" />
-            <element signature="e#1235#1236#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resolutioncore/src/main/java/com/iesemilidarder/anicolau/resolution/core/DataHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1388">
+          <caret line="116" column="19" selection-start-line="116" selection-start-column="19" selection-end-line="116" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3601#3766#0" expanded="true" />
+            <element signature="e#3765#3766#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/service/ItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/service/CallMeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/service/ItemServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/controller/ItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="55" column="12" selection-start-line="55" selection-start-column="8" selection-end-line="56" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/macro/myMacro.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/macroTest.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/index.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
+        <state relative-caret-position="51">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/resources/templates/macro/macroWrap.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resolutionweb/src/main/java/com/iesemilidarder/anicolau/resolution/web/controller/WebController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="25" column="14" selection-start-line="13" selection-end-line="27" selection-end-column="5" />
         </state>
       </provider>
     </entry>

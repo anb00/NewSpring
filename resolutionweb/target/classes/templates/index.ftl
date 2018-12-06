@@ -1,14 +1,19 @@
+<#import "macro/myMacro.ftl" as macroHelper>
+<#import "macro/macroWrap.ftl" as macroWrap>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Spring rocks the web</title>
+     <@macroHelper.headerLoadings title="Import"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <@macroHelper.headerLoadings/>
 </head>
-<body class="jumbotron">
+<@macroWrap.body>
 
+</@macroWrap.body>
     <br>
+<hr>
     <div class="container">
         <div class="row">
             <div class="col-sm">
@@ -45,24 +50,27 @@
 
 
 <hr>
-        <br>
-        <table>
-            <thead>
-            <tr>
-                <th th:text="#{msgs.cabeceras.nombre}">Nombre</th>
-                <th th:text="#{msgs.cabeceras.precio}">Precio</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="prod : ${produts}">
-                <td th:text="${project.parent.groupId}">Naranjas</td>
-                <td th:text="${description}">Naranjas</td>
-                <td th:text="${numbers.formatDecimal(precio,1,2)}">0.99</td>
-            </tr>
-            </tbody>
-        </table>
+        <h3>All Products</h3>
+<#if datil??>
+    <table class="table-dark" ><tr>
+        <#list datil as item>
+            <th scope="col">${item!""}</th></tr>
+            <tr><th scope="col">${item!""}</th></tr>
 
-<@my.copyright date="1999-2018"/>
+        </#list>
+
+    </table>
+</#if>
+        <form action="/api/rest/getAll" method="post">
+<a href="/items/get">GET ITEMS</a>
+            <button>ITEMS</button>
+
+        </form>
+        <br>
+        <br>
+
+
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

@@ -17,9 +17,9 @@ public class WebController {
     @RequestMapping("/")
     public String index(HttpSession session, Model model) {
         List<String> productTypes = Arrays.asList("Hoteles","Activities","Flights");
-        List<String> data = Arrays.asList("yuhu1", "yuhu2", "yuhu3");
+        List<String> data = Arrays.asList("yuhu0", "yuhu2", "yuhu3");
         //data.it
-
+//List<String> items = Arrays.
         model.addAttribute("datil",data);
         model.addAttribute("tony",productTypes);
         //model.addAttribute("ip",session.get)
