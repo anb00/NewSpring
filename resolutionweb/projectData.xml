@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<myProject>
+    <xcvxants>
+        <restaurant>
+            <name>Restaurant0</name>
+        </restaurant>
+        <restaurant>
+            <name>Restaurant1</name>
+        </restaurant>
+        <restaurant>
+            <name>Restaurant2</name>
+        </restaurant>
+        <restaurant>
+            <name>Restaurant3</name>
+        </restaurant>
+        <restaurant>
+            <name>Restaurant4</name>
+        </restaurant>
+        <restaurant>
+            <name>Restaurant5</name>
+        </restaurant>
+        <restaurant>
+            <name>Restaurant6</name>
+        </restaurant>
+        <restaurant>
+            <name>Restaurant7</name>
+        </restaurant>
+        <restaurant>
+            <name>Restaurant8</name>
+        </restaurant>
+        <restaurant>
+            <name>Restaurant9</name>
+        </restaurant>
+    </xcvxants>
+</myProject>

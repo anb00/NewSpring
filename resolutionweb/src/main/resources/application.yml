@@ -3,4 +3,4 @@ server:
 spring:
   mvc:
     view:
-      prefix: /templates/
+      prefix: /resources/
