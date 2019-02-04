@@ -19,11 +19,12 @@ public class RestApiController {
 
     @RequestMapping("/find")
     public Product findById(@RequestParam String uuid, Session session, Model model) {
-        Product product = DataHelper.getItemById(UUID.fromString(uuid));
-        //Restaurant restaurantes = DataHelper.getItemById(UUID.fromString(uuid));
-       // model.addAttribute("fi",DataHelper.getHotels());
-       // model.addAttribute("fi",DataHelper.getRestaurantes());
-       // model.addAttribute("fi",DataHelper.getActividades());
+        UUID id = UUID.fromString(uuid); // we use this twice.
+        Product product = DataHelper.getItemById(id);
+        //Restaurant restaurantes = DataHelper.getItemById(id); // <<< Esto está mal, getItemById devuelve Product, no Restaurant
+        model.addAttribute("fi",DataHelper.getHotels());
+        model.addAttribute("fi",DataHelper.getRestaurantes());
+        model.addAttribute("fi",DataHelper.getActividades());
         if (product == null) {
             return new Restaurant();
             //return new Activity();

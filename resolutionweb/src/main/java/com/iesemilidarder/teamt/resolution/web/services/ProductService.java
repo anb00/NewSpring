@@ -15,7 +15,7 @@ public interface ProductService {
 
     Product getProductById(Integer id);
 
-    Product findById(UUID id);
+    Product findById(String id);
 
     Product index(String gohome); //Arreglar que retorne a index, detalles del producto y borrar produto o modificar!
 
