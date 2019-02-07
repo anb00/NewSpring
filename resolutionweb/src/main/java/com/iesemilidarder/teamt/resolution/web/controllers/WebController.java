@@ -84,10 +84,11 @@ public class WebController {
     }
     */
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
-    public String deleteProduct(@PathVariable("uuid") UUID id, Model model) {
-       // Product product = DataHelper.getItemById(UUID.fromString(id));
+    public String deleteProduct(@PathVariable("id") String uuid, Model model) {
+        UUID id = UUID.fromString(uuid);
+        Product product = DataHelper.getItemById(id);
         //.orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
-        //DataHelper.deleteProduct(product);
+        DataHelper.deleteProduct(product);
         //model.addAttribute("aa", DataHelper.getHotels());
         return "hoteles";
     }
