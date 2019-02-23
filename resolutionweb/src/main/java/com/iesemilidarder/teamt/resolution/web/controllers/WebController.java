@@ -1,6 +1,8 @@
 package com.iesemilidarder.teamt.resolution.web.controllers;
 
 import com.iesemilidarder.teamt.resolution.core.DataHelper;
+import com.iesemilidarder.teamt.resolution.core.data.Activity;
+import com.iesemilidarder.teamt.resolution.core.data.Hotel;
 import com.iesemilidarder.teamt.resolution.core.data.Product;
 import com.iesemilidarder.teamt.resolution.core.data.Restaurant;
 import com.iesemilidarder.teamt.resolution.web.marshalling.DataFileHelper;
@@ -35,11 +37,11 @@ public class WebController {
 
     private Model initModel(Model model) {
         try {
-            model.addAttribute("datil", DataHelper.getHotels());
-            model.addAttribute("item", DataHelper.getItems());
-            model.addAttribute("act", serviceA.getActividades());
-            model.addAttribute("rest", service.getRestaurants());
-            model.addAttribute("aa", service.getRestaurants());
+            model.addAttribute("datil", DataHelper.getAll(Hotel.class));
+//            model.addAttribute("item", DataHelper.getItems());
+            model.addAttribute("act", DataHelper.getAll(Activity.class));
+            model.addAttribute("rest", DataHelper.getAll(Restaurant.class));
+//            model.addAttribute("aa", service.getRestaurants());
         } catch (Exception e) {
             System.out.println("Esto initModelController");
         }
@@ -65,12 +67,23 @@ public class WebController {
                              @RequestParam String imgUri,
                              @RequestParam Double precio
     ) {
+    	Hotel hotel = new Hotel();
+    	hotel.setDescription("Hola");
+    	hotel.setImgUri("http://localhost/");
+    	hotel.setName("Las Estrellas");
+    	DataHelper.create(hotel);
+    	Activity act = new Activity();
+    	act.setDescription("Carreras de karts");
+    	act.setName("karts");
+    	DataHelper.create(act);
+    	DataHelper.create(name);
+    	
         Product product = new Product();
         product.setName(name);
         product.setDescription(description);
         product.setImgUri(imgUri);
         product.setPrecio(precio);
-        DataHelper.addItem(product);
+        DataHelper.create(product);
 
         initModel(model);
         return "hoteles"; //Conseguir que devuelva a la página de index o a una del producto agregado!
@@ -98,7 +111,7 @@ public class WebController {
         restaurant.setDescription(description);
         restaurant.setImgUri(imgUri);
         restaurant.setPrecio(precio);
-        DataHelper.addItemRest(restaurant);
+        DataHelper.create(restaurant);
 
 
         model.addAttribute("rest", service.getRestaurants());
@@ -141,7 +154,9 @@ public class WebController {
      */
     @RequestMapping(value = "/delete/{id}")// , method = RequestMethod.DELETE)
     public String deleteProduct(@PathVariable("id") String uuid, Model model) {
+    	
         UUID id = UUID.fromString(uuid);
+        Hotel hotel = DataHelper.retrieve(Hotel.class, id);
         Product product = DataHelper.getItemById(id);
         //.orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
         DataHelper.deleteProduct(product);
