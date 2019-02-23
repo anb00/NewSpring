@@ -157,9 +157,8 @@ public class WebController {
     	
         UUID id = UUID.fromString(uuid);
         Hotel hotel = DataHelper.retrieve(Hotel.class, id);
-        Product product = DataHelper.getItemById(id);
         //.orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
-        DataHelper.deleteProduct(product);
+        DataHelper.delete(hotel);
         //model.addAttribute("aa", DataHelper.getHotels());
         initModel(model);
         return "hoteles";
@@ -177,7 +176,7 @@ public class WebController {
         //TODO Revisar:  DataHelper.getItemById(id).deleteById(id);
 
         //model.addAttribute("id", DataHelper.getItemById(UUID.fromString(uuid)));
-        model.addAttribute("uu", DataHelper.getItemById(UUID.fromString(uuid)));
+        model.addAttribute("uu", DataHelper.retrieve(UUID.fromString(uuid)));
         //model.addAttribute("idem", DataHelper.getItemById(UUID.fromString(uuid)));
 
         initModel(model);
@@ -197,8 +196,8 @@ public class WebController {
     @RequestMapping("/findRest")
     public String getItemByIdRest(@RequestParam String uuid, Model model) {
         //TODO Revisar:  DataHelper.getItemById(id).deleteById(id);
-        model.addAttribute("cc", DataHelper.getItemByIdRest(UUID.fromString(uuid)));
-        model.addAttribute("rest", service.getRestaurants());
+        model.addAttribute("cc", DataHelper.retrieve(UUID.fromString(uuid)));
+        model.addAttribute("rest", DataHelper.getAll(Restaurant.class));
         model.addAttribute("uu", service.getRestaurants());
         return "restaurants";
     }
