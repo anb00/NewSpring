@@ -6,35 +6,46 @@ import com.iesemilidarder.teamt.resolution.core.data.Restaurant;
 import com.iesemilidarder.teamt.resolution.web.marshalling.DataFileHelper;
 import com.iesemilidarder.teamt.resolution.web.marshalling.DataWrapper;
 import com.iesemilidarder.teamt.resolution.web.services.RestaurantService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
+/**
+ * Auth anb 23.2.19
+ */
 
 @Controller
 public class WebController {
 
+    private Logger log = LoggerFactory.getLogger(WebController.class);
+
     @Autowired
-    private RestaurantService variable;
+    private RestaurantService service;
+    //private HotelService serviceH;
+    private ActividadesService serviceA;
+    //private AllProducts;
 
 
     private Model initModel(Model model) {
         try {
             model.addAttribute("datil", DataHelper.getHotels());
             model.addAttribute("item", DataHelper.getItems());
-            model.addAttribute("act", DataHelper.getActividades());
-            model.addAttribute("rest", variable.getRestaurants());
+            model.addAttribute("act", serviceA.getActividades());
+            model.addAttribute("rest", service.getRestaurants());
+            model.addAttribute("aa", service.getRestaurants());
         } catch (Exception e) {
-            System.out.println("mek");
+            System.out.println("Esto initModelController");
         }
         return model;
     }
+
+
 
     /**
      * TODO: Bienvenid@!
@@ -65,39 +76,85 @@ public class WebController {
     }
 
 
+    /**
+     * Formulario para agregar Exclusivamente Restaurantes
+     * @param model
+     * @param name
+     * @param description
+     * @param imgUri
+     * @param precio
+     * @return
+     */
+    @RequestMapping("/addrest")
+    public String addItemRest(Model model,
+                              @RequestParam String name,
+                              @RequestParam String description,
+                              @RequestParam String imgUri,
+                              @RequestParam Double precio
+    ) {
+        Restaurant restaurant = new Restaurant();
+        restaurant.setName(name);
+        restaurant.setDescription(description);
+        restaurant.setImgUri(imgUri);
+        restaurant.setPrecio(precio);
+        DataHelper.addItemRest(restaurant);
+
+
+        model.addAttribute("rest", service.getRestaurants());
+
+        return "restaurants"; //Conseguir que devuelva a la página de index o a una del producto agregado!
+    }
+
+
+    /**
+     * Pagina Inicial de Hoteles
+     * @param session
+     * @param model
+     * @return
+     */
+
+
 
     @RequestMapping("/hoteles")
     public String addProduct(HttpSession session, Model model)
     {
-        model.addAttribute("datil",DataHelper.getHotels());
-        model.addAttribute("item",DataHelper.getItems());
-        model.addAttribute("rest",DataHelper.getRestaurantes());
-        model.addAttribute("act",DataHelper.getActividades());
+        initModel(model);
         return "hoteles";
     }
 
-
-    /* DELETE PRODUCT     @DeleteMapping("/delproducts")
-    public String deleteProduct2(@PathVariable String uuid,Model model) {
-        model.addAttribute("uu",DataHelper.getItemById(UUID.fromString(uuid)));
+  /*  @RequestMapping("/Allz")
+    public String show(HttpSession session, Model model)
+    {
+        model.addAttribute("act", serviceA.getActividades());
+        model.addAttribute("rest", service.getRestaurants());
         return "hoteles";
     }
-    */
-    @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
+
+*/
+
+    /**
+     * Controlador en Construcción a falta de Conversor String UUID y Viceversa
+     * @param
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/delete/{id}")// , method = RequestMethod.DELETE)
     public String deleteProduct(@PathVariable("id") String uuid, Model model) {
         UUID id = UUID.fromString(uuid);
         Product product = DataHelper.getItemById(id);
         //.orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
         DataHelper.deleteProduct(product);
         //model.addAttribute("aa", DataHelper.getHotels());
+        initModel(model);
         return "hoteles";
     }
 
-    /*@DeleteMapping("/delproducts2")
-    public String deleteProductX(@PathVariable String uuid,Model model) {
-        model.addAttribute("uu",DataHelper.deleteproduct(UUID.fromString(uuid)));
-        return "hoteles";
-    }*/
+    /**
+     * Controlador y Buscador Base Para Hoteles
+     * @param uuid
+     * @param model
+     * @return
+     */
 
     @RequestMapping("/find")
     public String getItemById(@RequestParam String uuid, Model model) {
@@ -111,10 +168,34 @@ public class WebController {
         return "hoteles";
     }
 
+    /**
+     * Controlador y Buscador para Restaurantes Exclusivamente por UUID
+     * @param uuid
+     * @param model
+     * @return
+     */
+
+    /* Buscador de Restaurantes por ID */
+
+
+    @RequestMapping("/findRest")
+    public String getItemByIdRest(@RequestParam String uuid, Model model) {
+        //TODO Revisar:  DataHelper.getItemById(id).deleteById(id);
+        model.addAttribute("cc", DataHelper.getItemByIdRest(UUID.fromString(uuid)));
+        model.addAttribute("rest", service.getRestaurants());
+        model.addAttribute("uu", service.getRestaurants());
+        return "restaurants";
+    }
+
+
+
+
     /* GET ALL RESTAURANTS */
     @RequestMapping("/restaurants")
     public String rests(HttpSession session, Model model) {
-        model.addAttribute("rest", DataHelper.getRestaurantes());
+        model.addAttribute("rest", service.getRestaurants());
+        model.addAttribute("uu", service.getRestaurants());
+        initModel(model);
         return "restaurants";
     }
 
@@ -131,7 +212,20 @@ public class WebController {
         model.addAttribute("activities", DataHelper.getActividades());
         return "activities";
     }
-    //Conseguir que devuelva a la página de index o a una del producto agregado!
 
 
+    @RequestMapping(value="/Update/{id}", method = RequestMethod.GET)
+    public String updateProduct(@PathVariable("id") UUID id, Model model){
+
+        try{
+            Product product = DataHelper.getItemById(UUID.fromString(String.valueOf(id)));
+            if (product != null){
+                model.addAttribute("product", product);
+            }
+
+        } catch (Exception e){
+            log.error("Update Hotel", e);
+        }
+        return "hoteles";
+    }
 }
