@@ -1,377 +1,262 @@
-<#import "macros/mymacro.ftl" as macroHelper><!-- Importación de la macro -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="shortcut icon" type="image/png" href="/img/logo.jpg"/>
-    <script type="javascript">$(function () {
-        $('#example').popover();
-    });</script>
-    <title>TripTravel - Hoteles</title>
-</head>
+<html lang="es" dir="ltr" data-light-ogb="true">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,width=device-width"/>
+      <title>iaw-Milestone-2</title>
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Google+Sans:300,400,500" rel="stylesheet" type="text/css">
+      <!-- from GH -->
+      <link crossorigin="anonymous" media="all" integrity="sha512-RPWwIpqyjxv5EpuWKUKyeZeWz9QEzIbAWTiYOuxGieUq7+AMiZbsLeQMfEdyEIUoNjLagHK0BEm92BmXnvaH4Q==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-40c1c9d8ff06284fb441108e6559f019.css" />
+      <link crossorigin="anonymous" media="all" integrity="sha512-3CnDMoFJPvbM39ryV5wc51yRo/6j6eQPt5SOlYaoBZhR9rVL/UZH3ME+wt72nsTlNFaSQ3nXT/0F4sxE1zbA6g==" rel="stylesheet" href="https://github.githubassets.com/assets/github-38162889e1878fa3b887aa360e70ab6c.css" />
+      <!-- END GH -->
+      <meta name="viewport" content="width=device-width">
+      <style type="text/css">
+         .card-horizontal {
+         display: flex;
+         flex: 1 1 auto;
+         }
+         .navbar {
+         padding: 5px 0;
+         width: 100%;
+         margin: 0 auto;
+         }
+         .navbar li {
+         display: inline-block;
+         text-align: center;
+         width: auto;
+         margin: 0 10px;
+         }
+         .navbar li.sep {
+         color: #FFF;
+         font-size: 16px;
+         font-weight: 500;
+         margin: 0;
+         }
+         .navbar li.auth {
+         background: #b9d533;
+         color: #FFF;
+         padding: 0 15px;
+         margin-top: 20px;
+         line-height: 28px;
+         border: none;
+         border-radius: 7px;
+         box-shadow: 0 2px #8ba028;
+         }
+         .blackNav {
+         width: 100%!important;
+         background: #050505;
+         margin-top: 0px;
+         }
+      </style>
+   </head>
+   <body style="background-color: #f5f5f5;">
+      <header class="blackNav" style="background-color: black;display: inline-block;width: 100%; height: 82px;">
+         <h2 style="color: white;" class="clearfix">iaw-Milestone-2</h2>
+         <button class="button btn" class="clearfix">Hoteles</button>
+         <button class="btn-secondary btn" class="clearfix" style="cursor: not-allowed;">Restaurantes</button>
+         <button class="btn-danger btn" class="clearfix" style="cursor: not-allowed;">Actividades</button>
+      </header>
+      <div style="margin-top: 12px;">
+      </div>
+      <div style="margin-top: 14px;">
+      </div>
+      <div class="container-fluid clearfix"></div>
+      <br>
+      <div role="main" class="application-main " style="background-color: white;">
+         <div id="js-pjax-container" data-pjax-container="" style="background-color: white";>
+            <div class="container-lg clearfix px-3 mt-4" style="background-color: transparent">
+               <div class="h-card col-3 float-left pr-3" style="background-color:white;">
+                  <span class="p-name vcard-fullname d-block overflow-hidden" itemprop="name">Antonio Nicolau Batle Co.</span>
+                  <hr>
+                  <div class="vcard-names-container py-3 js-sticky js-user-profile-sticky-fields" style="position: static;">
+                     <h1 class="vcard-names">
+                        <span class="p-name vcard-fullname d-block overflow-hidden" itemprop="name">Formulario de Registro</span>
+                        <span class="p-nickname vcard-username d-block" itemprop="additionalName">¡Registre Ahora su Hotel!</span>
+                     </h1>
+                     <form method="post" action="/add">
+                        <input type="text" class="form-control" id="nameHotel" name="name" required placeholder="Nombre del hotel"/>
+                        <input type="text" class="form-control" id="nameHotel" name="imgUri" required placeholder="Pais"/>
+                        <input type="text" class="form-control" id="nameHotel" name="description" required placeholder="Breve Descripcion"/>
+                        <input type="text" class="form-control" id="nameHotel" name="precio" required placeholder="Precio"/>
 
-<body>
-<@macroHelper.header/><!-- Macro header -->
+                        <button class="btn" value="Submit" type="submit">Añadir</button>
 
-<div class="container">
-    <div class="row">
-        <div class="col-3">
-            <h3> Añadir Hotel </h3>
-            <hr>
-            <form role="form" action="/add" method="post">
-                <div class="form-group">
-                    <label for="nameHotel">Nombre de Hotel</label>
-                    <input type="text" class="form-control" id="nameHotel" name="name" required/>
-                </div>
-                <div class="form-group">
-                    <label for="country">País</label>
-                    <select class="selectpicker form-control border" title="Buscar país" data-live-search="true" data-size="3" id="country" name="imgUri">
-                        <option data-tokens="AF">Afghanistan</option>
-                        <option data-tokens="AX">Åland Islands</option>
-                        <option data-tokens="AL">Albania</option>
-                        <option data-tokens="DZ">Algeria</option>
-                        <option data-tokens="AS">American Samoa</option>
-                        <option data-tokens="AD">Andorra</option>
-                        <option data-tokens="AO">Angola</option>
-                        <option data-tokens="AI">Anguilla</option>
-                        <option data-tokens="AQ">Antarctica</option>
-                        <option data-tokens="AG">Antigua and Barbuda</option>
-                        <option data-tokens="AR">Argentina</option>
-                        <option data-tokens="AM">Armenia</option>
-                        <option data-tokens="AW">Aruba</option>
-                        <option data-tokens="AU">Australia</option>
-                        <option data-tokens="AT">Austria</option>
-                        <option data-tokens="AZ">Azerbaijan</option>
-                        <option data-tokens="BS">Bahamas</option>
-                        <option data-tokens="BH">Bahrain</option>
-                        <option data-tokens="BD">Bangladesh</option>
-                        <option data-tokens="BB">Barbados</option>
-                        <option data-tokens="BY">Belarus</option>
-                        <option data-tokens="BE">Belgium</option>
-                        <option data-tokens="BZ">Belize</option>
-                        <option data-tokens="BJ">Benin</option>
-                        <option data-tokens="BM">Bermuda</option>
-                        <option data-tokens="BT">Bhutan</option>
-                        <option data-tokens="BO">Bolivia, Plurinational State of</option>
-                        <option data-tokens="BQ">Bonaire, Sint Eustatius and Saba</option>
-                        <option data-tokens="BA">Bosnia and Herzegovina</option>
-                        <option data-tokens="BW">Botswana</option>
-                        <option data-tokens="BV">Bouvet Island</option>
-                        <option data-tokens="BR">Brazil</option>
-                        <option data-tokens="IO">British Indian Ocean Territory</option>
-                        <option data-tokens="BN">Brunei Darussalam</option>
-                        <option data-tokens="BG">Bulgaria</option>
-                        <option data-tokens="BF">Burkina Faso</option>
-                        <option data-tokens="BI">Burundi</option>
-                        <option data-tokens="KH">Cambodia</option>
-                        <option data-tokens="CM">Cameroon</option>
-                        <option data-tokens="CA">Canada</option>
-                        <option data-tokens="CV">Cape Verde</option>
-                        <option data-tokens="KY">Cayman Islands</option>
-                        <option data-tokens="CF">Central African Republic</option>
-                        <option data-tokens="TD">Chad</option>
-                        <option data-tokens="CL">Chile</option>
-                        <option data-tokens="CN">China</option>
-                        <option data-tokens="CX">Christmas Island</option>
-                        <option data-tokens="CC">Cocos (Keeling) Islands</option>
-                        <option data-tokens="CO">Colombia</option>
-                        <option data-tokens="KM">Comoros</option>
-                        <option data-tokens="CG">Congo</option>
-                        <option data-tokens="CD">Congo, the Democratic Republic of the</option>
-                        <option data-tokens="CK">Cook Islands</option>
-                        <option data-tokens="CR">Costa Rica</option>
-                        <option data-tokens="CI">Côte d'Ivoire</option>
-                        <option data-tokens="HR">Croatia</option>
-                        <option data-tokens="CU">Cuba</option>
-                        <option data-tokens="CW">Curaçao</option>
-                        <option data-tokens="CY">Cyprus</option>
-                        <option data-tokens="CZ">Czech Republic</option>
-                        <option data-tokens="DK">Denmark</option>
-                        <option data-tokens="DJ">Djibouti</option>
-                        <option data-tokens="DM">Dominica</option>
-                        <option data-tokens="DO">Dominican Republic</option>
-                        <option data-tokens="EC">Ecuador</option>
-                        <option data-tokens="EG">Egypt</option>
-                        <option data-tokens="SV">El Salvador</option>
-                        <option data-tokens="GQ">Equatorial Guinea</option>
-                        <option data-tokens="ER">Eritrea</option>
-                        <option data-tokens="EE">Estonia</option>
-                        <option data-tokens="ET">Ethiopia</option>
-                        <option data-tokens="FK">Falkland Islands (Malvinas)</option>
-                        <option data-tokens="FO">Faroe Islands</option>
-                        <option data-tokens="FJ">Fiji</option>
-                        <option data-tokens="FI">Finland</option>
-                        <option data-tokens="FR">France</option>
-                        <option data-tokens="GF">French Guiana</option>
-                        <option data-tokens="PF">French Polynesia</option>
-                        <option data-tokens="TF">French Southern Territories</option>
-                        <option data-tokens="GA">Gabon</option>
-                        <option data-tokens="GM">Gambia</option>
-                        <option data-tokens="GE">Georgia</option>
-                        <option data-tokens="DE">Germany</option>
-                        <option data-tokens="GH">Ghana</option>
-                        <option data-tokens="GI">Gibraltar</option>
-                        <option data-tokens="GR">Greece</option>
-                        <option data-tokens="GL">Greenland</option>
-                        <option data-tokens="GD">Grenada</option>
-                        <option data-tokens="GP">Guadeloupe</option>
-                        <option data-tokens="GU">Guam</option>
-                        <option data-tokens="GT">Guatemala</option>
-                        <option data-tokens="GG">Guernsey</option>
-                        <option data-tokens="GN">Guinea</option>
-                        <option data-tokens="GW">Guinea-Bissau</option>
-                        <option data-tokens="GY">Guyana</option>
-                        <option data-tokens="HT">Haiti</option>
-                        <option data-tokens="HM">Heard Island and McDonald Islands</option>
-                        <option data-tokens="VA">Holy See (Vatican City State)</option>
-                        <option data-tokens="HN">Honduras</option>
-                        <option data-tokens="HK">Hong Kong</option>
-                        <option data-tokens="HU">Hungary</option>
-                        <option data-tokens="IS">Iceland</option>
-                        <option data-tokens="IN">India</option>
-                        <option data-tokens="ID">Indonesia</option>
-                        <option data-tokens="IR">Iran, Islamic Republic of</option>
-                        <option data-tokens="IQ">Iraq</option>
-                        <option data-tokens="IE">Ireland</option>
-                        <option data-tokens="IM">Isle of Man</option>
-                        <option data-tokens="IL">Israel</option>
-                        <option data-tokens="IT">Italy</option>
-                        <option data-tokens="JM">Jamaica</option>
-                        <option data-tokens="JP">Japan</option>
-                        <option data-tokens="JE">Jersey</option>
-                        <option data-tokens="JO">Jordan</option>
-                        <option data-tokens="KZ">Kazakhstan</option>
-                        <option data-tokens="KE">Kenya</option>
-                        <option data-tokens="KI">Kiribati</option>
-                        <option data-tokens="KP">Korea, Democratic People's Republic of</option>
-                        <option data-tokens="KR">Korea, Republic of</option>
-                        <option data-tokens="KW">Kuwait</option>
-                        <option data-tokens="KG">Kyrgyzstan</option>
-                        <option data-tokens="LA">Lao People's Democratic Republic</option>
-                        <option data-tokens="LV">Latvia</option>
-                        <option data-tokens="LB">Lebanon</option>
-                        <option data-tokens="LS">Lesotho</option>
-                        <option data-tokens="LR">Liberia</option>
-                        <option data-tokens="LY">Libya</option>
-                        <option data-tokens="LI">Liechtenstein</option>
-                        <option data-tokens="LT">Lithuania</option>
-                        <option data-tokens="LU">Luxembourg</option>
-                        <option data-tokens="MO">Macao</option>
-                        <option data-tokens="MK">Macedonia, the former Yugoslav Republic of</option>
-                        <option data-tokens="MG">Madagascar</option>
-                        <option data-tokens="MW">Malawi</option>
-                        <option data-tokens="MY">Malaysia</option>
-                        <option data-tokens="MV">Maldives</option>
-                        <option data-tokens="ML">Mali</option>
-                        <option data-tokens="MT">Malta</option>
-                        <option data-tokens="MH">Marshall Islands</option>
-                        <option data-tokens="MQ">Martinique</option>
-                        <option data-tokens="MR">Mauritania</option>
-                        <option data-tokens="MU">Mauritius</option>
-                        <option data-tokens="YT">Mayotte</option>
-                        <option data-tokens="MX">Mexico</option>
-                        <option data-tokens="FM">Micronesia, Federated States of</option>
-                        <option data-tokens="MD">Moldova, Republic of</option>
-                        <option data-tokens="MC">Monaco</option>
-                        <option data-tokens="MN">Mongolia</option>
-                        <option data-tokens="ME">Montenegro</option>
-                        <option data-tokens="MS">Montserrat</option>
-                        <option data-tokens="MA">Morocco</option>
-                        <option data-tokens="MZ">Mozambique</option>
-                        <option data-tokens="MM">Myanmar</option>
-                        <option data-tokens="NA">Namibia</option>
-                        <option data-tokens="NR">Nauru</option>
-                        <option data-tokens="NP">Nepal</option>
-                        <option data-tokens="NL">Netherlands</option>
-                        <option data-tokens="NC">New Caledonia</option>
-                        <option data-tokens="NZ">New Zealand</option>
-                        <option data-tokens="NI">Nicaragua</option>
-                        <option data-tokens="NE">Niger</option>
-                        <option data-tokens="NG">Nigeria</option>
-                        <option data-tokens="NU">Niue</option>
-                        <option data-tokens="NF">Norfolk Island</option>
-                        <option data-tokens="MP">Northern Mariana Islands</option>
-                        <option data-tokens="NO">Norway</option>
-                        <option data-tokens="OM">Oman</option>
-                        <option data-tokens="PK">Pakistan</option>
-                        <option data-tokens="PW">Palau</option>
-                        <option data-tokens="PS">Palestinian Territory, Occupied</option>
-                        <option data-tokens="PA">Panama</option>
-                        <option data-tokens="PG">Papua New Guinea</option>
-                        <option data-tokens="PY">Paraguay</option>
-                        <option data-tokens="PE">Peru</option>
-                        <option data-tokens="PH">Philippines</option>
-                        <option data-tokens="PN">Pitcairn</option>
-                        <option data-tokens="PL">Poland</option>
-                        <option data-tokens="PT">Portugal</option>
-                        <option data-tokens="PR">Puerto Rico</option>
-                        <option data-tokens="QA">Qatar</option>
-                        <option data-tokens="RE">Réunion</option>
-                        <option data-tokens="RO">Romania</option>
-                        <option data-tokens="RU">Russian Federation</option>
-                        <option data-tokens="RW">Rwanda</option>
-                        <option data-tokens="BL">Saint Barthélemy</option>
-                        <option data-tokens="SH">Saint Helena, Ascension and Tristan da Cunha</option>
-                        <option data-tokens="KN">Saint Kitts and Nevis</option>
-                        <option data-tokens="LC">Saint Lucia</option>
-                        <option data-tokens="MF">Saint Martin (French part)</option>
-                        <option data-tokens="PM">Saint Pierre and Miquelon</option>
-                        <option data-tokens="VC">Saint Vincent and the Grenadines</option>
-                        <option data-tokens="WS">Samoa</option>
-                        <option data-tokens="SM">San Marino</option>
-                        <option data-tokens="ST">Sao Tome and Principe</option>
-                        <option data-tokens="SA">Saudi Arabia</option>
-                        <option data-tokens="SN">Senegal</option>
-                        <option data-tokens="RS">Serbia</option>
-                        <option data-tokens="SC">Seychelles</option>
-                        <option data-tokens="SL">Sierra Leone</option>
-                        <option data-tokens="SG">Singapore</option>
-                        <option data-tokens="SX">Sint Maarten (Dutch part)</option>
-                        <option data-tokens="SK">Slovakia</option>
-                        <option data-tokens="SI">Slovenia</option>
-                        <option data-tokens="SB">Solomon Islands</option>
-                        <option data-tokens="SO">Somalia</option>
-                        <option data-tokens="ZA">South Africa</option>
-                        <option data-tokens="GS">South Georgia and the South Sandwich Islands</option>
-                        <option data-tokens="SS">South Sudan</option>
-                        <option data-tokens="ES">Spain</option>
-                        <option data-tokens="LK">Sri Lanka</option>
-                        <option data-tokens="SD">Sudan</option>
-                        <option data-tokens="SR">Suriname</option>
-                        <option data-tokens="SJ">Svalbard and Jan Mayen</option>
-                        <option data-tokens="SZ">Swaziland</option>
-                        <option data-tokens="SE">Sweden</option>
-                        <option data-tokens="CH">Switzerland</option>
-                        <option data-tokens="SY">Syrian Arab Republic</option>
-                        <option data-tokens="TW">Taiwan, Province of China</option>
-                        <option data-tokens="TJ">Tajikistan</option>
-                        <option data-tokens="TZ">Tanzania, United Republic of</option>
-                        <option data-tokens="TH">Thailand</option>
-                        <option data-tokens="TL">Timor-Leste</option>
-                        <option data-tokens="TG">Togo</option>
-                        <option data-tokens="TK">Tokelau</option>
-                        <option data-tokens="TO">Tonga</option>
-                        <option data-tokens="TT">Trinidad and Tobago</option>
-                        <option data-tokens="TN">Tunisia</option>
-                        <option data-tokens="TR">Turkey</option>
-                        <option data-tokens="TM">Turkmenistan</option>
-                        <option data-tokens="TC">Turks and Caicos Islands</option>
-                        <option data-tokens="TV">Tuvalu</option>
-                        <option data-tokens="UG">Uganda</option>
-                        <option data-tokens="UA">Ukraine</option>
-                        <option data-tokens="AE">United Arab Emirates</option>
-                        <option data-tokens="GB">United Kingdom</option>
-                        <option data-tokens="US">United States</option>
-                        <option data-tokens="UM">United States Minor Outlying Islands</option>
-                        <option data-tokens="UY">Uruguay</option>
-                        <option data-tokens="UZ">Uzbekistan</option>
-                        <option data-tokens="VU">Vanuatu</option>
-                        <option data-tokens="VE">Venezuela, Bolivarian Republic of</option>
-                        <option data-tokens="VN">Viet Nam</option>
-                        <option data-tokens="VG">Virgin Islands, British</option>
-                        <option data-tokens="VI">Virgin Islands, U.S.</option>
-                        <option data-tokens="WF">Wallis and Futuna</option>
-                        <option data-tokens="EH">Western Sahara</option>
-                        <option data-tokens="YE">Yemen</option>
-                        <option data-tokens="ZM">Zambia</option>
-                        <option data-tokens="ZW">Zimbabwe</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="description">Descripción</label>
-                    <input type="text" class="form-control" id="description" name="description" required/>
-                </div>
-                <div class="form-group">
-                    <label for="price">Precio</label>
-                    <input type="number" class="form-control" id="price" name="precio" min="1" required/>
-                </div>
+                     </form>
+                     <hr>
+                     <br>
+                     <h5 style="font-family: 'Palatino Linotype'">Buscador por ID</h5>
+                     <form class="form" method="post" action="/find">
+                        <input type="text" name="uuid" class="form-control device-width js-autosearch-field" placeholder="Ejemplo: 12da0186-8033" required/>
 
-                <button type="submit" value="Submit" class="btn btn-primary">Añade</button>
-            </form>
-            <div class="espacio">
-                <form role="form" action="/find" method="post">
-                    <h3> Buscar Hotel </h3>
-                    <hr>
-                    <div class="form-group">
-                        <label for="searchId">Buscar por ID</label>
-                        <input type="text" class="form-control" name="uuid"  placeholder="Ejemplo: 12da0186-8033" required/>
-                    </div>
+                        <button class="btn" type="submit" value="submit">Buscar</button>
 
-                    <button type="submit" value="Submit" class="btn btn-primary">Busca</button>
-                </form>
+                     </form>
+                  </div>
+               </div>
+               <div class="col-9 float-left pl-2">
+                  <div class="position-relative">
+                     <div class="border-bottom border-gray-dark py-3">
+                        <form action="/Allz" method="POST">
+                           <div class="TableObject-item TableObject-item--primary pr-4">
+                              <input type="text"  name="" style="width: 300px;" class="form-control width-full js-autosearch-field" placeholder="Busque un Hotel,Restaurante,Actividad..." autocomplete="off" aria-label="Busque un Hotel,Restaurante,Actividad..." value="">
+                           </div>
+                           <div class="TableObject-item text-right">
+                              <div class="select-menu d-inline-block js-menu-container js-select-menu select-menu-modal-right">
+                                 <select class="btn select-menu-button js-menu-target" type="button" aria-haspopup="true" aria-expanded="false">
+                                    <option class="js-select-button" selected="">Categories</option>
+                                    <option class="js-select-button">Hotels</option>
+                                    <option class="js-select-button">Restaurants</option>
+                                    <option class="js-select-button">Activities</option>
+                                 </select>
+                              </div>
+                              <button class="button btn ml-3" type="submit" value="Search">
+                              SEARCH
+                              </button>
+                           </div>
+                        </form>
+                     </div>
+                     <div id="user-repositories-list">
+                        <ul data-filterable-for="your-repos-filter" data-filterable-type="substring">
+                           <!-- Esto es lo que muestra cuando se realiza una búqueda por ID -->
+                           <#if uu??>
+                           <div class="container-fluid" style="background-color: khaki;">
+                              <div class="row">
+                                 <div class="col-12 mt-3">
+                                    <div class="card">
+                                       <div class="card-horizontal">
+                                          <div class="img-square-wrapper">
+                                             <img class="" src="/img/Hilton.jpg" alt="Hotel" style="border: 2px solid black; border-radius: 5px;width: 300px;height: 190px;">
+                                          </div>
+                                          <div class="card-body">
+                                             <h3 class="card-title">${uu.name}</h3>
+                                             <cite>
+                                                <h6 class="card-title">${uu.id}</h6>
+                                             </cite>
+                                             <h2 class="card-title" style="color: darkred;">${uu.precio} €</h2>
+                                             <p class="card-text">${uu.description}</p>
+                                          </div>
+                                       </div>
+                                       <div class="card-footer">
+                                          <small class="text-muted">Last updated 1 mins ago</small>
+                                          <button type="button" class="btn btn-outline-primary align-items-end clearfix"><a href="/delete/${uu.id}">BORRAR</a></button>
+                                          <button type="button" class="btn btn-outline-primary align-items-end clearfix"><a href="/update/${uu.id}">UPDATE</a></button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           </#if>
+                           <!-- Fin búsqueda por UUID -->
+                           <#if item??>
+                           <#list item as item>
+                           <div class="container-fluid">
+                              <div class="row">
+                                 <div class="col-12 mt-3">
+                                    <div class="card">
+                                       <div class="card-horizontal">
+                                          <div class="img-square-wrapper">
+                                             <img class="" src="/img/Hilton.jpg" alt="Hotel" style="border: 2px solid black; border-radius: 5px;width: 300px;height: 190px;">
+                                          </div>
+                                          <div class="card-body">
+                                             <h3 class="card-title">${item.name}</h3>
+                                             <cite>
+                                                <h6 class="card-title">${item.id}</h6>
+                                             </cite>
+                                             <h2 class="card-title" style="color: darkred;">${item.precio} €</h2>
+                                             <p class="card-text">${item.description}</p>
+                                          </div>
+                                       </div>
+                                       <div class="card-footer">
+                                          <small class="text-muted">Last updated 3 mins ago</small>
+                                          <button type="button" class="btn btn-outline-primary align-items-end clearfix">        <a href="/delete/${item.id}">BORRAR</a></button>
+                                          <button type="button" class="btn btn-outline-primary align-items-end clearfix">        <a href="/update/${item.id}">UPDATE</a></button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <hr>
+                           </#list>
+                           </#if>
+                           <#if act??>
+                           <#list act as act>
+                           <div class="container-fluid">
+                              <div class="row">
+                                 <div class="col-12 mt-3">
+                                    <div class="card">
+                                       <div class="card-horizontal">
+                                          <div class="img-square-wrapper">
+                                             <img class="" src="/img/actividad.jpg" alt="Hotel" style="border: 2px solid black; border-radius: 5px;width: 300px;height: 190px;">
+                                          </div>
+                                          <div class="card-body">
+                                             <h3 class="card-title">${act.name}</h3>
+                                             <cite>
+                                                <h6 class="card-title">${act.id}</h6>
+                                             </cite>
+                                             <h2 class="card-title" style="color: darkred;">${act.precio} €</h2>
+                                             <p class="card-text">${act.description}</p>
+                                          </div>
+                                       </div>
+                                       <div class="card-footer">
+                                          <small class="text-muted">Last updated 3 mins ago</small>
+                                          <button type="button" class="btn btn-outline-primary align-items-end clearfix">        <a href="/delete/${act.id}">BORRAR</a></button>
+                                          <button type="button" class="btn btn-outline-primary align-items-end clearfix">        <a href="/update/${act.id}">UPDATE</a></button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           </#list>
+                           </#if>
+                           <#if rest??>
+                              <#list rest as rest>
+                                 <div class="container-fluid">
+                                    <div class="row">
+                                       <div class="col-12 mt-3">
+                                          <div class="card">
+                                             <div class="card-horizontal">
+                                                <div class="img-square-wrapper">
+                                                   <img class="" src="/img/actividad.jpg" alt="Hotel" style="border: 2px solid black; border-radius: 5px;width: 300px;height: 190px;">
+                                                </div>
+                                                <div class="card-body">
+                                                   <h3 class="card-title">${rest.name}</h3>
+                                                   <cite>
+                                                      <h6 class="card-title">${rest.id}</h6>
+                                                   </cite>
+                                                   <h2 class="card-title" style="color: darkred;">${rest.precio} €</h2>
+                                                   <p class="card-text">${rest.description}</p>
+                                                </div>
+                                             </div>
+                                             <div class="card-footer">
+                                                <small class="text-muted">Last updated 3 mins ago</small>
+                                                <button type="button" class="btn btn-outline-primary align-items-end clearfix">        <a href="/delete/${rest.id}">BORRAR</a></button>
+                                                <button type="button" class="btn btn-outline-primary align-items-end clearfix">        <a href="/update/${rest.id}">UPDATE</a></button>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                              </#list>
+                           </#if>
+                        </ul>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-
-        <div class="col-9">
-            <h3> Resultados </h3>
-            <hr>
-                <#if item??>
-                    <#list item as item>
-                <div id="main" data-paged="6" style="opacity: 1;" class="content">
-                    <div class="simple grid cols-3" >
-                        <div class="simple_options">
-                            <table class="table" style="border:transparent;"><tr style="border: 0px transparent;"><td style="border: 0px transparent;"><img src="/img/Atlantico.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" width="192" height="192" /></td>
-                                <td style="border: 0px transparent;">
-                                    <span class="nickname block"><span class="thin">Id Nº:</span> <span class="simple_name" href=""><h6>${item.id}</h6><br>- <h6>${item.description}</h6></span></span></span></td>
-                                <td style="border: 0px transparent;"> <div><span class="nickname block"><span class="thin"><h3>${item.precio}</h3>Euros</span></span></div></td>
-                                <td style="border: 0px transparent;"><span class="red" ><h3><i class="fa fa-ban">${item.name}</i> </span></h3></td>
-                                <td style="border: 0px transparent;"><span class="red" ><h3><i class="fa fa-ban">${item.imgUri}</i> </span></h3></td>
-                                <td><a href="#" id="example" class="btn btn-outline-primary"" rel="popover"
-                                       data-content="This is the body of Popover"
-                                       data-original-title="Creativity Tuts" style="cursor: not-allowed;">RESERVAR
-                                </a>
-                                    <a href="/delete/{id}/${item.id}" id="example" class="btn btn-outline-primary" rel="popover"
-                                       data-content="This is the body of Popover"
-                                       data-original-title="Creativity Tuts" style="cursor: help;">&nbsp;&nbsp;BORRAR
-                                    </a>
-                                </td>
-                            </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                    </#list>
-                </#if>
-            <!-- Results del buscador por ID -->
-            <#if uu??>
-
-                    <div id="main" data-paged="6" style="opacity: 1;" class="content" style="color: black;">
-                        <div class="simple grid cols-3"  style="background-color:lightslategray;">
-                            <div class="simple_options">
-                                <table class="table" style="border:transparent;"><tr style="border: 0px transparent;"><td style="border: 0px transparent;"><img src="/img/Atlantico.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" width="192" height="192" /></td>
-                                        <td style="border: 0px transparent;">
-                                            <span class="nickname block"><span class="thin">Id Nº:</span> <span class="simple_name" href=""><h6>${uu.id}</h6><br>- <h6>${uu.description}</h6></span></span></span></td>
-                                        <td style="border: 0px transparent;"> <div><span class="nickname block"><span class="thin"><h3>${uu.precio}</h3>Euros</span></span></div></td>
-                                        <td style="border: 0px transparent;"><span class="red" ><h3><i class="fa fa-ban">${uu.name}</i> </span></h3></td>
-                                        <td style="border: 0px transparent;"><span class="red" ><h3><i class="fa fa-ban">${uu.imgUri}</i> </span></h3></td>
-                                        <td><a href="/delete/{id}${uu.id}" id="example" class="btn btn-secondary" rel="popover"
-                                               data-content="¿Do you want to remove this Product?"
-                                               data-original-title="Borrar">BORRAR
-                                            </a></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-            </#if>
-            <!-- fin de resultador por el buscador ID -->
-        </div>
-
-    </div>
-</div>
-
-<@macroHelper.footer/><!-- Macro footer -->
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
-</body>
+         </div>
+         <br>
+         <br><br>
+         <br>
+      </div>
+      <br>
+      <br>
+     <!-- <footer> <span class="p-name vcard-fullname d-block overflow-hidden" itemprop="name">Antonio Nicolau Batle</span></footer> -->
+   </body>
 </html>
