@@ -13,7 +13,7 @@ import java.util.UUID;
 
 public class DataHelper {
 
-    public static Integer MAX_NUM = 3; //poner el número que queramos
+    public static Integer MAX_NUM = 1; //poner el número que queramos
 
 
 
@@ -47,7 +47,7 @@ public class DataHelper {
 
     /* Lista de productos Array 2 */
 
-    private static List<Product> products = new ArrayList<>();
+    public static List<Product> products = new ArrayList<>();
 
     public static List<Product> getItems() {
         if (products.isEmpty()) {
@@ -76,7 +76,11 @@ public class DataHelper {
     /**
      * En delete product method by anb
      */
+/*
 
+    public static void updateProduct(Product product) { products.update(product);
+    }
+*/
 
 
 
@@ -117,24 +121,41 @@ public class DataHelper {
         return null;
     }
 
-
-
-
-
-
-    /* edit or update product */
-
-    public static Product getAndUpdate(UUID id) {
+    /**
+     * Método específico para buscar por ID
+     * @param id
+     * @return
+     */
+    public static Restaurant getItemByIdRest(UUID id) {
         try {
-            for (Product aux : products) {
+            for (Restaurant aux : restaurantes) {
                 if (aux.getId().equals(id)) {
                     return aux;
                 }
             }
         } catch (Exception e) {
-            System.out.println("WANTED!!!" + e.toString());
+            System.out.println("WANTED!!! " + e.toString());
         }
         return null;
+    }
+
+
+
+    /* edit or update product */
+
+    public void  getAndUpdate(UUID id) {
+        try {
+            for (Product aux : products) {
+                if (aux.getId().equals(id)) {
+                }
+                else{
+                    this.addItem(aux);
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("WANTED!!!" + e.toString());
+        }
+
     }
     /* end edit and update */
 
@@ -149,6 +170,19 @@ public class DataHelper {
         }
     }
 
+    /* add restaurants */
+    public static void addItemRest(Restaurant aux) {
+        try {
+            if (aux != null) {
+                restaurantes.add(aux);
+            }
+        } catch (Exception e) {
+            System.out.println("MEK!!!" + e.toString());
+        }
+    }
+
+
+
     public static void isempty() {
         for (int i = 0; i < MAX_NUM; i++) {
             Product Item;
@@ -156,7 +190,7 @@ public class DataHelper {
             Item.setName("Hotel Marbella Nº" + i);
             Item.setPrecio(++i + 100 + i + 00.00);
             Item.setDescription("Cada Hotel Incluye Pension completa según Nº de estrellas (Starts Nº" + i + ")");
-            Item.setImgUri("http://");
+            Item.setImgUri("España");
             products.add(Item);
 
         }
@@ -224,7 +258,7 @@ public class DataHelper {
     }
 
 
-    /* MÉTODO TO DELETE */
+    /* MÉTODO TO DELETE fase Alpha  */
 
     public static void deleteproduct(UUID product) {
         try {
@@ -237,18 +271,9 @@ public class DataHelper {
         }
     }
     /**
-     * Método Delete 2
+     * Método Delete 2 fase beta
      */
-   /* public static void deleteproduct(UUID id) {
-        try {
 
-                products.remove(product);
-
-           }
-        catch (Exception e) {
-            System.out.println("MEK!!!" + e.toString());
-        }
-    }*/
 
 
 

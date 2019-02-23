@@ -16,7 +16,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/rest")
 public class RestApiController {
-
+/*
     @RequestMapping("/find")
     public Product findById(@RequestParam String uuid, Session session, Model model) {
         UUID id = UUID.fromString(uuid); // we use this twice.
@@ -49,11 +49,7 @@ public class RestApiController {
     }
 
 
-    /* UPDATE OR EDIT THE PRODUCT */
-    @RequestMapping("/update")
-    public Product findndUpdate(@RequestParam String uuid, Session session, Model model) {
-        Product product = DataHelper.getAndUpdate(UUID.fromString(uuid));
-        return product;
-    }
+ */
 
 }
+
