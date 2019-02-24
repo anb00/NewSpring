@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class XMLController {
+public class XMLController {/*
     @RequestMapping("/XML")
     public String index(Model model) {
 
@@ -33,5 +33,5 @@ public class XMLController {
 
         model.addAttribute("act", DataHelper.getActividades());
         return "index"; //Tiene que ser algún archivo después de templates para que funcione
-        }
+        }*/
 }

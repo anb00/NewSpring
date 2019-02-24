@@ -117,43 +117,6 @@ public class DataHelper {
 		m.remove(id);
 	}
 	
-//
-//	/* end Array Hoteles */
-//
-//	/* FIND BY UUID in HOTELS AND ITEMS */
-//	public static Product getItemById(UUID id) {
-//		try {
-//			for (Product aux : products) {
-//				if (aux.getId().equals(id)) {
-//					return aux;
-//				}
-//			}
-//		} catch (Exception e) {
-//			System.out.println("WANTED!!!" + e.toString());
-//		}
-//		return null;
-//	}
-//
-//	public static void addItem(Product aux) {
-//		try {
-//			if (aux != null) {
-//				products.add(aux);
-//			}
-//		} catch (Exception e) {
-//			System.out.println("MEK!!!" + e.toString());
-//		}
-//	}
-//
-//	/* add restaurants */
-//	public static void addItemRest(Restaurant aux) {
-//		try {
-//			if (aux != null) {
-//				restaurantes.add(aux);
-//			}
-//		} catch (Exception e) {
-//			System.out.println("MEK!!!" + e.toString());
-//		}
-//	}
 
 	/**
 	 * Checks for emptyness of items of class {@code cl}.
@@ -170,80 +133,6 @@ public class DataHelper {
 		return m == null || m.isEmpty();
 	}
 	
-//
-//	/* IsEmpty Restaurant */
-//	public static void isEmptyRestaurant() {
-//		for (int i = 0; i < MAX_NUM; i++) {
-//			Restaurant rest1;
-//			rest1 = new Restaurant() {
-//				@Override
-//				public void setName(String name) {
-//					super.setName(name);
-//
-//				}
-//			};
-//
-//			rest1.setName("Restaurante Nº" + i);
-//			rest1.setPrecio(++i + 100 + i + 00.00);
-//			rest1.setDescription(
-//					"Cada rest Incluye  Menú Degustacion según Nº de estrellas Michelin (Starts Nº" + i + ")");
-//			rest1.setImgUri("http://");
-//			restaurantes.add(rest1);
-//
-//		}
-//
-//	}
-//
-//	/* is empty Hoteles */
-//	public static void isemptyhoteles() {
-//		for (int i = 0; i < MAX_NUM; i++) {
-//			Hotel hotelx = new Hotel();
-//			Hotel alpha = new Hotel();
-//			alpha.setName("Bella Vista");
-//			alpha.setDescription("asdasd");
-//			alpha.setPrecio(12.0);
-//			alpha.setImgUri("no image");
-//			hotelx.setName("Hotel Marbella Nº" + i);
-//			hotelx.setPrecio(++i + 100 + i + 00.00);
-//			hotelx.setDescription("Cada Hotel Incluye Pension completa según Nº de estrellas (Starts Nº" + i + ")");
-//			hotelx.setImgUri("http://");
-//			hoteles.add(hotelx);
-//			hoteles.add(alpha);
-//
-//		}
-//
-//	}
-//
-//	/* is Empty Actividades */ /* Esto genera actividades */
-//	public static void isEmptyActividades() {
-//		for (int i = 0; i < MAX_NUM; i++) {
-//			Activity actx;
-//			actx = new Activity();
-//
-//			actx.setName("Actividades Nº" + i);
-//			actx.setPrecio(++i + 100 + i + 00.00);
-//			actx.setDescription("Cada Actividad Tiene una descripción (Starts Nº" + i + ")");
-//			actx.setImgUri("http://");
-//			actividades.add(actx);
-//
-//		}
-//
-//	}
-//
-//	/* MÉTODO TO DELETE fase Alpha */
-//
-//	public static void deleteproduct(UUID product) {
-//		try {
-//			if (product != null) {
-//				products.remove(product);
-//				// products.del(aux);
-//			}
-//		} catch (Exception e) {
-//			System.out.println("MEK!!!" + e.toString());
-//		}
-//	}
-//	/**
-//	 * Método Delete 2 fase beta
-//	 */
+
 
 }
