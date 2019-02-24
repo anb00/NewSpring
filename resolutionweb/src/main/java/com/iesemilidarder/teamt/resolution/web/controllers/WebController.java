@@ -25,14 +25,14 @@ import java.util.UUID;
  */
 
 @Controller
-public class WebController {
+public class WebController<method> {
 
     private Logger log = LoggerFactory.getLogger(WebController.class);
 
-    @Autowired
-    private RestaurantService service;
+   // @Autowired
+   // private RestaurantService service;
     //private HotelService serviceH;
-    private ActividadesService serviceA;
+   // private ActividadesService serviceA;
     //private AllProducts;
 
 
@@ -69,9 +69,10 @@ public class WebController {
                              @RequestParam Double precio
     ) throws AlreadyInDatabaseException {
     	Hotel hotel = new Hotel();
-    	hotel.setDescription("Hola");
-    	hotel.setImgUri("http://localhost/");
-    	hotel.setName("Las Estrellas");
+    	hotel.setDescription(description);
+    	hotel.setImgUri(imgUri);
+    	hotel.setPrecio(precio);
+    	hotel.setName(name);
     	//DataHelper.create(hotel);
     	Activity act = new Activity();
     	act.setDescription("Carreras de karts");
@@ -154,7 +155,7 @@ public class WebController {
      * @param model
      * @return
      */
-    @RequestMapping(value = "/delete/{id}")// , method = RequestMethod.DELETE)
+    @RequestMapping(value = "/delete/{id}" , method = RequestMethod.DELETE)
     public String deleteProduct(@PathVariable("id") String uuid, Model model) {
     	
         UUID id = UUID.fromString(uuid);
@@ -200,7 +201,7 @@ public class WebController {
         //TODO Revisar:  DataHelper.getItemById(id).deleteById(id);
         model.addAttribute("cc", DataHelper.retrieve(UUID.fromString(uuid)));
         model.addAttribute("rest", DataHelper.getAll(Restaurant.class));
-        model.addAttribute("uu", service.getClass());
+      //  model.addAttribute("uu", service.getClass());
         return "restaurants";
     }
 
