@@ -9,10 +9,10 @@ import java.util.List;
 
 @Service
 public class RestaurantService {
-
+/*
     public List<Restaurant> getRestaurants() {
         return DataHelper.getRestaurantes();
     }
 
-
+*/
 }

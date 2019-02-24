@@ -1,5 +1,6 @@
 package com.iesemilidarder.teamt.resolution.web.controllers;
 
+import com.iesemilidarder.teamt.resolution.core.AlreadyInDatabaseException;
 import com.iesemilidarder.teamt.resolution.core.DataHelper;
 import com.iesemilidarder.teamt.resolution.core.data.Activity;
 import com.iesemilidarder.teamt.resolution.core.data.Hotel;
@@ -61,29 +62,30 @@ public class WebController {
      * @return
      */
     @RequestMapping("/add")
-    public String addProduct(Model model,
+    public String create(Model model,
                              @RequestParam String name,
                              @RequestParam String description,
                              @RequestParam String imgUri,
                              @RequestParam Double precio
-    ) {
+    ) throws AlreadyInDatabaseException {
     	Hotel hotel = new Hotel();
     	hotel.setDescription("Hola");
     	hotel.setImgUri("http://localhost/");
     	hotel.setName("Las Estrellas");
-    	DataHelper.create(hotel);
+    	//DataHelper.create(hotel);
     	Activity act = new Activity();
     	act.setDescription("Carreras de karts");
     	act.setName("karts");
-    	DataHelper.create(act);
-    	DataHelper.create(name);
+        DataHelper.create(hotel);
+        //DataHelper.create(act);
+    	//DataHelper.create(name);
     	
         Product product = new Product();
         product.setName(name);
         product.setDescription(description);
         product.setImgUri(imgUri);
         product.setPrecio(precio);
-        DataHelper.create(product);
+        //DataHelper.create(product);
 
         initModel(model);
         return "hoteles"; //Conseguir que devuelva a la página de index o a una del producto agregado!
@@ -105,16 +107,16 @@ public class WebController {
                               @RequestParam String description,
                               @RequestParam String imgUri,
                               @RequestParam Double precio
-    ) {
+    ) throws AlreadyInDatabaseException {
         Restaurant restaurant = new Restaurant();
         restaurant.setName(name);
         restaurant.setDescription(description);
         restaurant.setImgUri(imgUri);
         restaurant.setPrecio(precio);
-        DataHelper.create(restaurant);
+       DataHelper.create(restaurant);
 
 
-        model.addAttribute("rest", service.getRestaurants());
+        model.addAttribute("rest", DataHelper.getAll(Restaurant.class));
 
         return "restaurants"; //Conseguir que devuelva a la página de index o a una del producto agregado!
     }
@@ -158,7 +160,7 @@ public class WebController {
         UUID id = UUID.fromString(uuid);
         Hotel hotel = DataHelper.retrieve(Hotel.class, id);
         //.orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
-        DataHelper.delete(hotel);
+       // DataHelper.delete(hotel);
         //model.addAttribute("aa", DataHelper.getHotels());
         initModel(model);
         return "hoteles";
@@ -198,7 +200,7 @@ public class WebController {
         //TODO Revisar:  DataHelper.getItemById(id).deleteById(id);
         model.addAttribute("cc", DataHelper.retrieve(UUID.fromString(uuid)));
         model.addAttribute("rest", DataHelper.getAll(Restaurant.class));
-        model.addAttribute("uu", service.getRestaurants());
+        model.addAttribute("uu", service.getClass());
         return "restaurants";
     }
 
@@ -208,39 +210,11 @@ public class WebController {
     /* GET ALL RESTAURANTS */
     @RequestMapping("/restaurants")
     public String rests(HttpSession session, Model model) {
-        model.addAttribute("rest", service.getRestaurants());
-        model.addAttribute("uu", service.getRestaurants());
+        model.addAttribute("rest",DataHelper.getAll(Restaurant.class));
+        model.addAttribute("uu", DataHelper.getAll(Restaurant.class));
         initModel(model);
         return "restaurants";
     }
 
-    /*GET THE HOTELS */
 
-    @RequestMapping("/getAllhotels")
-    public String hotels(HttpSession session, Model model) {
-        model.addAttribute("hotels", DataHelper.getItems());
-        return "hotels";
-    }
-
-    @RequestMapping("/activities")
-    public String activities(HttpSession session, Model model) {
-        model.addAttribute("activities", DataHelper.getActividades());
-        return "activities";
-    }
-
-
-    @RequestMapping(value="/Update/{id}", method = RequestMethod.GET)
-    public String updateProduct(@PathVariable("id") UUID id, Model model){
-
-        try{
-            Product product = DataHelper.getItemById(UUID.fromString(String.valueOf(id)));
-            if (product != null){
-                model.addAttribute("product", product);
-            }
-
-        } catch (Exception e){
-            log.error("Update Hotel", e);
-        }
-        return "hoteles";
-    }
 }
