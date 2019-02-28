@@ -148,8 +148,8 @@
                            </div>
                            </#if>
                            <!-- Fin búsqueda por UUID -->
-                           <#if item??>
-                           <#list item as item>
+                           <#if datil??>
+                           <#list datil as item>
                            <div class="container-fluid">
                               <div class="row">
                                  <div class="col-12 mt-3">

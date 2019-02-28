@@ -26,15 +26,23 @@ import java.util.UUID;
  */
 
 @Controller
-public class WebController {
+public class WebController<method> {
 
     private Logger log = LoggerFactory.getLogger(WebController.class);
 
+//<<<<<<< master
     @Autowired
 //    private RestaurantService service;
 //    private HotelService serviceH;
 //    private ActividadesService serviceA;
 //    private AllProducts;
+//=======
+   // @Autowired
+   // private RestaurantService service;
+    //private HotelService serviceH;
+   // private ActividadesService serviceA;
+    //private AllProducts;
+//>>>>>>> master
 
 
     private Model initModel(Model model) {
@@ -70,10 +78,17 @@ public class WebController {
                              @RequestParam Double precio
     ) throws AlreadyInDatabaseException {
     	Hotel hotel = new Hotel();
+//<<<<<<< master
     	
     	hotel.setDescription("Hola");
     	hotel.setImgUri("http://localhost/");
     	hotel.setName("Las Estrellas");
+//=======
+    	hotel.setDescription(description);
+    	hotel.setImgUri(imgUri);
+    	hotel.setPrecio(precio);
+    	hotel.setName(name);
+//>>>>>>> master
     	//DataHelper.create(hotel);
     	Activity act = new Activity();
     	act.setDescription("Carreras de karts");
@@ -157,9 +172,14 @@ public class WebController {
      * @return
      * @throws InstanceNotFoundException 
      */
+//<<<<<<< master
     @RequestMapping(value = "/delete/{id}")// , method = RequestMethod.DELETE)
     public String deleteProduct(@PathVariable("id") String uuid, Model model) 
     		throws InstanceNotFoundException {
+//=======
+    @RequestMapping(value = "/delete/{id}" , method = RequestMethod.DELETE)
+    public String deleteProduct(@PathVariable("id") String uuid, Model model) {
+//>>>>>>> master
     	
         UUID id = UUID.fromString(uuid);
         Hotel hotel = DataHelper.retrieve(Hotel.class, id);
@@ -204,7 +224,11 @@ public class WebController {
         //TODO Revisar:  DataHelper.getItemById(id).deleteById(id);
         model.addAttribute("cc", DataHelper.retrieve(Restaurant.class, UUID.fromString(uuid)));
         model.addAttribute("rest", DataHelper.getAll(Restaurant.class));
+//<<<<<<< master
         //model.addAttribute("uu", service.getClass());
+//=======
+      //  model.addAttribute("uu", service.getClass());
+//>>>>>>> master
         return "restaurants";
     }
 
