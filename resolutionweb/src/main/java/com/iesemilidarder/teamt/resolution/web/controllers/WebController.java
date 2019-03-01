@@ -10,6 +10,7 @@ import com.iesemilidarder.teamt.resolution.core.data.Restaurant;
 import com.iesemilidarder.teamt.resolution.web.marshalling.DataFileHelper;
 import com.iesemilidarder.teamt.resolution.web.marshalling.DataWrapper;
 import com.iesemilidarder.teamt.resolution.web.services.ActividadesService;
+import com.iesemilidarder.teamt.resolution.web.services.HotelService;
 import com.iesemilidarder.teamt.resolution.web.services.RestaurantService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,10 +33,10 @@ public class WebController<method> {
 
 //<<<<<<< master
     @Autowired
-//    private RestaurantService service;
-//    private HotelService serviceH;
-//    private ActividadesService serviceA;
-//    private AllProducts;
+   private RestaurantService service;
+   private HotelService serviceH;
+    private ActividadesService serviceA;
+ // private AllProducts;
 //=======
    // @Autowired
    // private RestaurantService service;
@@ -64,12 +65,21 @@ public class WebController<method> {
      * TODO: Bienvenid@!
      *
      * @param model
-     * @param name
      * @param description
      * @param imgUri
      * @param precio
      * @return
      */
+
+  /* @RequestMapping("/hoteles")
+    public String isempty(Model model) {
+        model.addAttribute("act", serviceH.getClass());
+        return "hoteles";
+    }
+*/
+
+
+
     @RequestMapping("/add")
     public String create(Model model,
                              @RequestParam String name,
@@ -135,7 +145,7 @@ public class WebController<method> {
 
         model.addAttribute("rest", DataHelper.getAll(Restaurant.class));
 
-        return "restaurants"; //Conseguir que devuelva a la página de index o a una del producto agregado!
+        return "restaurantes"; //Conseguir que devuelva a la página de index o a una del producto agregado!
     }
 
 
@@ -155,15 +165,15 @@ public class WebController<method> {
         return "hoteles";
     }
 
-  /*  @RequestMapping("/Allz")
-    public String show(HttpSession session, Model model)
+   @RequestMapping("/Allz")
+    public String   getAll(HttpSession session, Model model)
     {
-        model.addAttribute("act", serviceA.getActividades());
-        model.addAttribute("rest", service.getRestaurants());
+        model.addAttribute("act", serviceA.getClass());
+        //model.addAttribute("rest", service.getRestaurants());
         return "hoteles";
     }
 
-*/
+
 
     /**
      * Controlador en Construcción a falta de Conversor String UUID y Viceversa
@@ -177,8 +187,8 @@ public class WebController<method> {
     public String deleteProduct(@PathVariable("id") String uuid, Model model) 
     		throws InstanceNotFoundException {
 //=======
-    @RequestMapping(value = "/delete/{id}" , method = RequestMethod.DELETE)
-    public String deleteProduct(@PathVariable("id") String uuid, Model model) {
+   // @RequestMapping(value = "/delete/{id}" , method = RequestMethod.DELETE)
+   // public String deleteProduct(@PathVariable("id") String uuid, Model model) {
 //>>>>>>> master
     	
         UUID id = UUID.fromString(uuid);
@@ -229,19 +239,19 @@ public class WebController<method> {
 //=======
       //  model.addAttribute("uu", service.getClass());
 //>>>>>>> master
-        return "restaurants";
+        return "restaurantes";
     }
 
 
 
 
     /* GET ALL RESTAURANTS */
-    @RequestMapping("/restaurants")
+    @RequestMapping("/restaurantes")
     public String rests(HttpSession session, Model model) {
         model.addAttribute("rest",DataHelper.getAll(Restaurant.class));
         model.addAttribute("uu", DataHelper.getAll(Restaurant.class));
         initModel(model);
-        return "restaurants";
+        return "restaurantes";
     }
 
 

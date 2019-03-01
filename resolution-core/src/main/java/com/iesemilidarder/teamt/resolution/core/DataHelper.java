@@ -1,21 +1,20 @@
 package com.iesemilidarder.teamt.resolution.core;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 import com.iesemilidarder.teamt.resolution.core.data.Product;
 
 public class DataHelper {
 
-//	public static Integer MAX_NUM = 1; // poner el número que queramos
+    public static Integer MAX_NUM = 3; // Stock Controller
 
 	private DataHelper() {
 	}
 
 	private static final Map<Class<? extends Product>, Map<UUID, Product>> by_class_id = new HashMap<>();
 	private static final Map<UUID, Product> by_id = new HashMap<>();
+    private static List<Product> products;
+
 
 	/**
 	 * Gets all instances of class {@code cl}.
@@ -132,7 +131,28 @@ public class DataHelper {
 		Map<UUID, Product> m = by_class_id.get(cl);
 		return m == null || m.isEmpty();
 	}
-	
+
+
+	public static void isempty() {
+		for (int i = 0; i < MAX_NUM; i++) {
+			Product Item;
+			Item = new Product();
+			Item.setName("Hotel Marbella Nº" + i);
+			Item.setPrecio(++i + 100 + i + 00.00);
+			Item.setDescription("Cada Hotel Incluye Pension completa según Nº de estrellas (Starts Nº" + i + ")");
+			Item.setImgUri("http://");
+			products.add(Item);
+
+		}
+
+	}
+
+
+
+
+
+
+
 
 
 }
