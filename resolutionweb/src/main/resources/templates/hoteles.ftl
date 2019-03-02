@@ -587,10 +587,8 @@
    </head>
    <body style="background-color: #f5f5f5;">
       <header class="blackNav" style="background-color: black;display: inline-block;width: 100%; height: 80px;">
-         <h3 style="font-size: large;" class="title">iLOGO</h3>
-         <i class="fas fa-home btn button ml-2" style="color: black;font-size: 10px;" >hoteles</i>
-         <i class="fas fa-utensils btn button ml-2" style="color: black;font-size:10px;">restaurantes</i>
-         <i class="fas fa-snowboarding btn button ml-2" style="color: black;font-size:10px;">Actividades</i>
+         <h3 style="font-size: large;color:lime;" class="title">iLOGO</h3>
+
       </header>
       <div style="margin-top: 12px;">
       </div>
@@ -598,17 +596,14 @@
       </div>
       <div class="container-fluid clearfix">
 
-         <i class="fas fa-key btn button ml-3" style="color: black;font-size: 15px;">ORDERS</i>
-         <i class="fas fa-delicious btn button ml-3" style="color: black;font-size:15px;">DELICIOUS</i>
-         <i class="fas fa-diamond btn button ml-3" style="color: black;font-size:15px;">OUTLET</i>
-         <i class="fas fa-warning btn button ml-3" style="color: black;font-size:15px;">OUTLET</i>
+
       </div>
       <br>
       <div role="main" class="application-main " style="background-color: white;">
          <div id="js-pjax-container" data-pjax-container="" style="background-color: white";>
             <div class="container-lg clearfix px-3 mt-4" style="background-color: transparent">
                <div class="h-card col-3 float-left pr-3" style="background-color:white;">
-                  <span class="p-name vcard-fullname d-block overflow-hidden" itemprop="name">Antonio Nicolau Batle Co.</span>
+                  <span class="p-name vcard-fullname d-block overflow-hidden" itemprop="name">Hotels</span>
                   <i class="fa fa-key w3-spin" style="font-size:54px"></i>
                   <hr>
                   <div class="vcard-names-container py-3 js-sticky js-user-profile-sticky-fields" style="position: static;">
@@ -638,7 +633,7 @@
                </div>
                <div class="col-9 float-left pl-2">
                   <div class="position-relative">
-                     <div class="border-bottom border-gray-dark py-3">
+                     <!-- <div class="border-bottom border-gray-dark py-3">
                         <form action="/Allz" method="POST">
                            <div class="TableObject-item TableObject-item--primary pr-4">
                               <input type="text"  name="" style="width: 300px;" class="form-control width-full js-autosearch-field" placeholder="Busque un Hotel,Restaurante,Actividad..." autocomplete="off" aria-label="Busque un Hotel,Restaurante,Actividad..." value="">
@@ -657,7 +652,7 @@
                               </button>
                            </div>
                         </form>
-                     </div>
+                     </div> -->
                      <br>
                      <!-- NewNav BigFilter -->
                      <!-- contentmenu -->
@@ -667,9 +662,9 @@
 
 
                         <div class="listings_search">
-                           <div class="inlinediv">
-                              <form class="search" method="get">
-                                 <input type="text" name="search" value="" class="form-control width-full js-autosearch-field" placeholder="Advanced Search" autocomplete="off">
+                           <div class="inlinediv" style="width: 300px;">
+                              <form action="#" method="get">
+                                 <input type="text" name="search" value="" class="form-control width-full js-autosearch-field" placeholder="Advanced Search" autocomplete="off" style="width: 300px;">
                            </div>
                            <div class="inlinediv"><!-- <div class="styled_select">--><select  name='category' class="btn select-menu-button js-menu-target" type="button" aria-haspopup="true" aria-expanded="false"><option value='' disabled selected class="js-select-button">Select category</option><option value='1' class="js-select-button">··Hoteles </option><option value='2' class="js-select-button">··Restaurants </option><option value='3' class="js-select-button">··Activities </option><option value='4' class="js-select-button"> ··Autos </option><option value='5' class="js-select-button"> ··Rooms </option><option value='6' class="js-select-button"> ··Others </option></select><!--</div>--><input type="submit" value="Search" class="button btn ml-3"></div>
                         </div>

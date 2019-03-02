@@ -30,6 +30,21 @@ public class DataHelper {
 		return (Collection<T>) m.values();
 	}
 
+
+	/**
+	 * Generate Products in the begining with isEmpty method
+	 * @param new_product
+	 * @param <T>
+	 * @return
+	 * @throws AlreadyInDatabaseException
+	 */
+
+
+
+
+
+
+
 	/* LET'S CRUD. */
 
 	/* CREATE */
