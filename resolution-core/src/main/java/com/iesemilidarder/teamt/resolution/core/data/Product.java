@@ -3,17 +3,22 @@ package com.iesemilidarder.teamt.resolution.core.data;
 import java.util.UUID;
 
 public  class Product {
-    private UUID id = UUID.randomUUID();
+    private UUID id = null;
     private Double precio = Math.random();
     private String name;
     private String description;
     private String imgUri;
 
+    
     public UUID getId() {
         return id;
     }
 
-    public Double getPrecio() {
+    public void setId(UUID id) {
+		this.id = id;
+	}
+
+	public Double getPrecio() {
         return precio;
     }
 
