@@ -29,6 +29,13 @@ public class DataHelper {
 			return null;
 		return (Collection<T>) m.values();
 	}
+	
+	/**
+	 * @return all instances of {@link Product}s.
+	 */
+	public static Collection<Product> getAll() {
+		return by_id.values();
+	}
 
 
 	/**
@@ -57,6 +64,10 @@ public class DataHelper {
 			by_class_id.put(cl, m);
 		}
 		UUID id = new_product.getId();
+		if (id == null) {
+			id = UUID.randomUUID();
+			new_product.setId(id);
+		}
 		if (m.containsKey(id))
 			throw new AlreadyInDatabaseException("id " + id + " already in database");
 		m.put(id, new_product);
