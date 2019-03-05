@@ -20,6 +20,8 @@ import com.iesemilidarder.teamt.resolution.core.data.Hotel;
 import com.iesemilidarder.teamt.resolution.core.data.Product;
 import com.iesemilidarder.teamt.resolution.core.data.Restaurant;
 
+import static com.iesemilidarder.teamt.resolution.core.DataHelper.isempty;
+
 /**
  * Auth anb 23.2.19
  */
@@ -33,7 +35,7 @@ public class WebController<method> {
 
     private Model initModel(Model model) {
         try {
-            model.addAttribute("datil", DataHelper.getAll(Hotel.class));
+            model.addAttribute("hotel", DataHelper.getAll(Hotel.class));
 //            model.addAttribute("item", DataHelper.getItems());
             model.addAttribute("act", DataHelper.getAll(Activity.class));
             model.addAttribute("rest", DataHelper.getAll(Restaurant.class));
@@ -78,18 +80,18 @@ public class WebController<method> {
     	hotel.setPrecio(precio);
     	hotel.setName(name);
     	//DataHelper.create(hotel);
-    	Activity act = new Activity();
-    	act.setDescription("Carreras de karts");
-    	act.setName("karts");
+    	//Activity act = new Activity();
+    	//act.setDescription(description);
+    	//act.setName(name);
         hotel = DataHelper.create(hotel);
-        DataHelper.create(act);  
+        //DataHelper.create(act);
     	//DataHelper.create(name);
-    	
+    	/*
         Product product = new Product();
         product.setName(name);
         product.setDescription(description);
         product.setImgUri(imgUri);
-        product.setPrecio(precio);
+        product.setPrecio(precio);*/
         //DataHelper.create(product);
 
         initModel(model);
@@ -137,17 +139,25 @@ public class WebController<method> {
 
 
     @RequestMapping("/hoteles")
-    public String addProduct(HttpSession session, Model model)
+    public String Main(HttpSession session, Model model)
     {
-        initModel(model);
+        //initModel(model);
+        //isempty();
+        Hotel alpha = new Hotel();
+        alpha.setName("copa Alta");
+        alpha.setPrecio(100.00);
+       // model.addAttribute("hotel",DataHelper.isempty());
+        model.addAttribute("hotel",DataHelper.getAll(Hotel.class));
+        //model.addAttribute("uu",DataHelper.retrieve(UUID.fromString(uuid)));
         return "hoteles";
     }
 
    @RequestMapping("/Allz")
     public String   getAll(HttpSession session, Model model)
     {
-        model.addAttribute("act", DataHelper.getAll());
+       // model.addAttribute("all", DataHelper.getAll(Hotel.class));
         //model.addAttribute("rest", service.getRestaurants());
+        initModel(model);
         return "hoteles";
     }
 
@@ -166,13 +176,37 @@ public class WebController<method> {
     	
         UUID id = UUID.fromString(uuid);
         Hotel hotel = DataHelper.retrieve(Hotel.class, id);
+        //Restaurant restaurant = DataHelper.retrieve(Restaurant.class,id );
         //.orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
         DataHelper.delete(hotel);
-        model.addAttribute("aa", DataHelper.getAll(Hotel.class));
-        initModel(model);
+        //DataHelper.delete(restaurant);
+        model.addAttribute("hotel", DataHelper.getAll(Hotel.class));
+       // model.addAttribute("rest",DataHelper.getAll(Restaurant.class));
+        //initModel(model);
         return "hoteles";
     }
+    /**
+     * DELETE FOR RESTAURANTS
+     */
+    @RequestMapping(value = "/deleterest/{id}")// , method = RequestMethod.DELETE)
+    public String deleteRestProduct(@PathVariable("id") String uuid, Model model)
+            throws InstanceNotFoundException {
 
+        UUID id = UUID.fromString(uuid);
+
+        Restaurant restaurant = DataHelper.retrieve(Restaurant.class,id );
+        //.orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
+
+        DataHelper.delete(restaurant);
+
+        model.addAttribute("rest",DataHelper.getAll(Restaurant.class));
+       // initModel(model);
+        return "restaurantes";
+    }
+
+/**
+ * end delete for rests
+ */
     /**
      * Controlador y Buscador Base Para Hoteles
      * @param uuid
@@ -217,8 +251,8 @@ public class WebController<method> {
     @RequestMapping("/restaurantes")
     public String rests(HttpSession session, Model model) {
         model.addAttribute("rest",DataHelper.getAll(Restaurant.class));
-        model.addAttribute("uu", DataHelper.getAll(Restaurant.class));
-        initModel(model);
+       // model.addAttribute("uu", DataHelper.getAll(Restaurant.class));
+       // initModel(model);
         return "restaurantes";
     }
 

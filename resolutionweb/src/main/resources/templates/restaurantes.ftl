@@ -7,6 +7,7 @@
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
       <link href="https://fonts.googleapis.com/css?family=Google+Sans:300,400,500" rel="stylesheet" type="text/css">
       <link href="css/NewStyle.css" rel="stylesheet" type="text/css"/>
+      <link href="css/library.css" rel="stylesheet" type="text/css">
       <!-- from GH -->
       <link crossorigin="anonymous" media="all" integrity="sha512-RPWwIpqyjxv5EpuWKUKyeZeWz9QEzIbAWTiYOuxGieUq7+AMiZbsLeQMfEdyEIUoNjLagHK0BEm92BmXnvaH4Q==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-40c1c9d8ff06284fb441108e6559f019.css" />
       <link crossorigin="anonymous" media="all" integrity="sha512-3CnDMoFJPvbM39ryV5wc51yRo/6j6eQPt5SOlYaoBZhR9rVL/UZH3ME+wt72nsTlNFaSQ3nXT/0F4sxE1zbA6g==" rel="stylesheet" href="https://github.githubassets.com/assets/github-38162889e1878fa3b887aa360e70ab6c.css" />
@@ -58,7 +59,7 @@
                      </form>
                   </div>
                </div>
-               <div class="col-9 float-left pl-2">
+               <!-- <div class="col-9 float-left pl-2">
                   <div class="position-relative">
                      <div class="border-bottom border-gray-dark py-3">
                         <form action="/Allz" method="POST">
@@ -79,8 +80,51 @@
                               </button>
                            </div>
                         </form>
-                     </div>
-                     <div id="user-repositories-list">
+                     </div> -->
+                     <!-- start advanced search form -->
+                     <div class="col-9 float-left pl-2">
+                        <div class="position-relative">
+
+                           <br>
+                           <!-- NewNav BigFilter -->
+                           <!-- contentmenu -->
+                           <!-- listings_search -->
+                           <!-- inlinediv -->
+                           <!-- styled_select -->
+
+
+                           <div class="listings_search">
+                              <div class="inlinediv" style="width: 300px;">
+                                 <form action="#" method="get">
+                                    <input type="text" name="search" value="" class="form-control width-full js-autosearch-field" placeholder="Advanced Search" autocomplete="off" style="width: 300px;">
+                              </div>
+                              <div class="inlinediv"><!-- <div class="styled_select">--><select  name='category' class="btn select-menu-button js-menu-target" type="button" aria-haspopup="true" aria-expanded="false"><option value='' disabled selected class="js-select-button">Select category</option><option value='1' class="js-select-button">··Hoteles </option><option value='2' class="js-select-button">··Restaurants </option><option value='3' class="js-select-button">··Activities </option><option value='4' class="js-select-button"> ··Autos </option><option value='5' class="js-select-button"> ··Rooms </option><option value='6' class="js-select-button"> ··Others </option></select><!--</div>--><input type="submit" value="Search" class="button btn ml-3"></div>
+                           </div>
+                           <div class="listings_search_filter">
+                              <input type="text" name="minprice" class="form-control" placeholder="Min price (EUR)" value="" autocomplete="off">
+                              <input type="text" name="maxprice" class=" form-control" placeholder="Max price (EUR)" value="" autocomplete="off">
+                              <select name="shipping_to"  class="btn select-menu-button js-menu-target" >
+                                 <option selected value="" class="js-select-button">Shipping To</option>
+                                 <option value="Spain" class="js-select-button">Spain</option>
+                                 <option value="Europe" class="js-select-button">America</option>
+                                 <option value="Africa" class="js-select-button">Africa</option>
+                              </select>
+                              <select name="shipping_to"  class="btn select-menu-button js-menu-target" >
+                                 <option selected value="" class="js-select-button">Shipping From</option>
+                                 <option value="Spain" class="js-select-button">Spain</option>
+                                 <option value="Spain" class="js-select-button">Africa</option>
+                                 <option value="Spain" class="js-select-button">America</option>
+
+                              </select>
+
+                              </form></div>
+                           <br>
+                           <hr>
+
+
+
+                           <!-- end advanced search form -->
+                           <div id="user-repositories-list">
                         <ul data-filterable-for="your-repos-filter" data-filterable-type="substring">
                            <!-- Esto es lo que muestra cuando se realiza una búqueda por ID -->
                            <#if uu??>
@@ -92,7 +136,7 @@
                                           <div class="img-square-wrapper">
                                              <img class="" src="/img/restaurante.jpg" alt="Rest" style="border: 2px solid black; border-radius: 5px;width: 300px;height: 190px;">
                                           </div>
-                                          <div class="card-body">
+                                          <div class="card-body" style="text-align: right;">
                                              <h3 class="card-title">${uu.name}</h3>
                                              <cite>
                                                 <h6 class="card-title">${uu.id}</h6>
@@ -114,60 +158,21 @@
                            <!-- Fin búsqueda por UUID -->
                            <#if rest??>
                            <#list rest as m>
-                           <div class="container-fluid">
-                              <div class="row">
-                                 <div class="col-12 mt-3">
-                                    <div class="card">
-                                       <div class="card-horizontal">
-                                          <div class="img-square-wrapper">
-                                             <img class="" src="/img/restaurante.jpg" alt="Hotel" style="border: 2px solid black; border-radius: 5px;width: 300px;height: 190px;">
-                                          </div>
-                                          <div class="card-body">
-                                             <h3 class="card-title">${m.name}</h3>
-                                             <cite>
-                                                <h6 class="card-title">${m.id}</h6>
-                                             </cite>
-                                             <h2 class="card-title" style="color: darkred;">${m.precio} €</h2>
-                                             <p class="card-text">${m.description}</p>
-                                          </div>
-                                       </div>
-                                       <div class="card-footer">
-                                          <small class="text-muted">Last updated 3 mins ago</small>
-                                          <button type="button" class="btn btn-outline-primary align-items-end clearfix">        <a href="/delete/${m.id}">BORRAR</a></button>
-                                          <button type="button" class="btn btn-outline-primary align-items-end clearfix">        <a href="/update/${m.id}">UPDATE</a></button>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <hr>
-                           </#list>
-                           </#if>
-                           <#if act??>
-                           <#list act as act>
-                           <div class="container-fluid">
-                              <div class="row">
-                                 <div class="col-12 mt-3">
-                                    <div class="card">
-                                       <div class="card-horizontal">
-                                          <div class="img-square-wrapper">
-                                             <img class="" src="/img/actividad.jpg" alt="Hotel" style="border: 2px solid black; border-radius: 5px;width: 300px;height: 190px;">
-                                          </div>
-                                          <div class="card-body">
-                                             <h3 class="card-title">${act.name}</h3>
-                                             <cite>
-                                                <h6 class="card-title">${act.id}</h6>
-                                             </cite>
-                                             <h2 class="card-title" style="color: darkred;">${act.precio} €</h2>
-                                             <p class="card-text">${act.description}</p>
-                                          </div>
-                                       </div>
-                                       <div class="card-footer">
-                                          <small class="text-muted">Last updated 3 mins ago</small>
-                                          <button type="button" class="btn btn-outline-primary align-items-end clearfix">        <a href="/delete/${act.id}">BORRAR</a></button>
-                                          <button type="button" class="btn btn-outline-primary align-items-end clearfix">        <a href="/update/${act.id}">UPDATE</a></button>
-                                       </div>
-                                    </div>
+                           <div class="container-fluid" style="margin-top: 0px;margin-bottom: 0px;padding: 0px;margin: 0px;">
+                              <div class="row" style="margin-top: 0px;margin-bottom: 0px;padding: 0px;margin: 0px;">
+                                 <div class="col-md-7" style="margin-top: 0px;margin-bottom: 0px;padding:-2px;margin: 0px;">
+<table style="width: 500px;"><tr><td> <div class="img-square-wrapper" style="margin-top: 0px;padding: 0px;margin: 0px;">
+            <img class="" src="/img/restaurante.jpg" alt="restaurante" style="border: 1px solid black; border-radius: 2px;width: 250px;height: 170px;">
+         </div></td><td > <h3 class="card-title">${m.name}</h3>
+         <cite>
+            <h6 class="card-title">${m.id}</h6>
+         </cite>
+         <h4 class="card-title" style="color: darkred;">${m.precio} €</h4>
+         <h6 class="card-text">${m.description}</h6>
+         <button type="button" class="btn btn-outline-primary align-items-end clearfix" style="text-align: right;">        <a href="/deleterest/${m.id}">BORRAR</a></button>
+      </td></tr></table>
+
+
                                  </div>
                               </div>
                            </div>
@@ -175,9 +180,9 @@
                            </#list>
                            </#if>
 
-                        </ul>
-                        <br>
-                        <br>
+
+
+
                         <br>
                         <br>
                      </div>
@@ -186,7 +191,7 @@
             </div>
          </div>
          <br>
-         <br><br>
+         <br>
          <br>
       </div>
       <br>
