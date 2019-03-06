@@ -63,25 +63,29 @@
 
 
          <div class="container-lg clearfix px-3 mt-4" style="background-color: blue;">
-             <h4 style="color: #13ff64;font-family: 'Yu Gothic';">
-               B.A.S.E
-            </h4>
-            <div id="logo" style="margin-top: -0.8%;"><h5 style="color: white;font-weight: 700;text-decoration: bold;font-size:27px;font-family:'ToetheLineless';text-shadow: 0 0 3.2px #FF0000, 0 0 5.2px #0000FF;">LOGO</h5></div>
+
+                <h5 style="color: white;font-weight: 700;text-decoration: bold;font-size:27px;font-family:'ToetheLineless';text-shadow: 0 0 3.2px #FF0000, 0 0 5.2px #0000FF;">Ð☼LOGO PocketMARKET</h5></div>
+         <button class="button btn btn-dark" style="text-decoration: none;"> <i class="fa fa-eur" style="font-size:20px;color:black;"></i>Productos</button>
+
+            <div id="logo" style="margin-top: -0.8%;"><h5 style="color: white;font-weight: 700;text-decoration: bold;font-size:27px;font-family:'ToetheLineless';text-shadow: 0 0 3.2px #FF0000, 0 0 5.2px #0000FF;">Ð☼LOGO PocketMARKET</h5></div>
          </div>
 
       </header>
       <div style="margin-top: 12px;text-align: center">
 
-         <button class="button btn">< !-- <i class="fa fa-address-book" style="font-size:20px;color: black;"></i> -- >hoteles</button>
-         <button class="button btn" style="text-decoration: none;">< !-- <i class="fa fa-empire" style="font-size:20px;color:black;"></i>-- >restaurantes</button>
+         <button class="button btn btn-danger"> <i class="fa fa-product-hunt" style="font-size:20px;color: black;"></i> Hoteles</button>
+         <button class="button btn btn-dark" style="text-decoration: none;"> <i class="fa fa-exchange" style="font-size:20px;color:black;"></i>Restaurantes</button>
+         <button class="button btn btn-sm" style="text-decoration: none;"> <i class="fa fa-youtube" style="font-size:20px;color:black;"></i>Actividades</button>
+         <button class="button btn btn-secondary" style="text-decoration: none;"> <i class="fa fa-opencart" style="font-size:20px;color:black;"></i>Productos</button>
+         <button class="button btn btn-primary" style="text-decoration: none;"> <i class="fa fa-gamepad" style="font-size:20px;color:black;"></i>outlet</button>
       </div>
        <div style="margin-top: 14px;">
-         <h4>titulo sub 3</h4>
+         <h4>a little place in a big CyberWorld</h4>
       </div>
 
 
       <div role="main" class="application-main " style="background-color: red;">
-         <div  style="margin-top: -0.8%;"><h1 style="color: white;font-weight: 700;text-decoration: bold;font-size:27px;font-family:'ToetheLineless';text-shadow: 0 0 3.2px #FF0000, 0 0 5.2px #0000FF;">MARKET</h1></div>
+         <div  style="margin-top: -0.8%;"><h1 style="color: white;font-weight: 700;text-decoration: bold;font-size:27px;font-family:'ToetheLineless';text-shadow: 0 0 3.2px #FF0000, 0 0 5.2px #0000FF;">The Pocket Market </h1></div>
          <div id="js-pjax-container" data-pjax-container="" style="background-color: green;">
             <div class="container-lg clearfix px-3 mt-4" style="background-color:yellow;">
                <div class="h-card col-3 float-left pr-3" style="background-color:black;">
